@@ -4,7 +4,12 @@ $ErrorActionPreference = "Stop"
 $ArchiveFileName = "tool.7z"
 $TempDirectory = Join-Path $env:TEMP "Node"
 
-$NodeToolcachePath = Join-Path -Path $env:AGENT_TOOLSDIRECTORY -ChildPath "node"
+$ToolcacheRoot = $env:AGENT_TOOLSDIRECTORY
+if ([string]::IsNullOrEmpty($ToolcacheRoot)) {
+    # GitHub images don't have `AGENT_TOOLSDIRECTORY` variable
+    $ToolcacheRoot = $env:RUNNER_TOOL_CACHE
+}
+$NodeToolcachePath = Join-Path -Path $ToolcacheRoot -ChildPath "node"
 $NodeToolcacheVersionPath = Join-Path -Path $NodeToolcachePath -ChildPath $Version.ToString()
 $NodeToolcacheArchitecturePath = Join-Path $NodeToolcacheVersionPath $Architecture
 
