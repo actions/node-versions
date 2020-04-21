@@ -142,4 +142,4 @@ function Build-VersionsManifest {
 $gitHubApi = Get-GitHubApi -AccountName $GitHubRepositoryOwner -ProjectName $GitHubRepositoryName -AccessToken $GitHubAccessToken
 $releases = $gitHubApi.GetGitHubReleases()
 $versionIndex = Build-VersionsManifest $releases
-$versionIndex | ConvertTo-Json -Depth 5 | Out-File $OutputFile -Encoding utf8 -Force
+$versionIndex | ConvertTo-Json -Depth 5 | Out-File $OutputFile -Encoding UTF8NoBOM -Force
