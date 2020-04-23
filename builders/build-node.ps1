@@ -23,8 +23,10 @@ param(
     [Parameter (Mandatory=$true)][Version] $Version,
     [Parameter (Mandatory=$true)][string] $Platform,
     [string] $Architecture = "x64"
-    
 )
+
+Import-Module (Join-Path $PSScriptRoot "../helpers" | Join-Path -ChildPath "nix-helpers.psm1") -DisableNameChecking
+Import-Module (Join-Path $PSScriptRoot "../helpers" | Join-Path -ChildPath "win-helpers.psm1") -DisableNameChecking
 
 function Get-NodeBuilder {
     <#

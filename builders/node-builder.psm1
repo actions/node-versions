@@ -15,6 +15,9 @@ class NodeBuilder {
     .PARAMETER Architecture
     The architecture with which Node.js should be built.
 
+    .PARAMETER TempFolderLocation
+    The location of temporary files that will be used during Node.js package generation. Using system BUILD_STAGINGDIRECTORY variable value.
+
     .PARAMETER ArtifactLocation
     The location of generated Node.js artifact. Using system environment BUILD_BINARIESDIRECTORY variable value.
 
@@ -26,6 +29,7 @@ class NodeBuilder {
     [version] $Version
     [string] $Platform
     [string] $Architecture
+    [string] $TempFolderLocation
     [string] $ArtifactLocation
     [string] $InstallationTemplatesLocation
 
@@ -35,6 +39,7 @@ class NodeBuilder {
         $this.Architecture = $architecture
 
         $this.ArtifactLocation = $env:BUILD_BINARIESDIRECTORY
+        $this.TempFolderLocation = $env:BUILD_STAGINGDIRECTORY
 
         $this.InstallationTemplatesLocation = Join-Path -Path $PSScriptRoot -ChildPath "../installers"
     }
@@ -56,7 +61,7 @@ class NodeBuilder {
 
         $binariesUri = $this.GetBinariesUri()
         $targetFilename = [IO.Path]::GetFileName($binariesUri)
-        $targetFilepath = Join-Path -Path $this.ArtifactLocation -ChildPath $targetFilename
+        $targetFilepath = Join-Path -Path $this.TempFolderLocation -ChildPath $targetFilename
 
         Write-Debug "Download binaries from $binariesUri to $targetFilepath"
         try {
