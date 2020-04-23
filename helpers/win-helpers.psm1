@@ -25,5 +25,7 @@ function Create-SevenZipArchive {
 
     $ArchiveTypeArgument = "-t${ArchiveType}"
 
-    7z a $ArchiveTypeArgument $ArchivePath "$SourceFolder\*.*" -r
+    Push-Location $SourceFolder
+    7z a $ArchiveTypeArgument $ArchivePath *.* -r
+    Pop-Location
 }
