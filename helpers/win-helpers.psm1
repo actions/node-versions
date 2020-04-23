@@ -11,5 +11,5 @@ function Extract-7ZipArchive {
     )
 
     Write-Debug "Extract $ArchivePath to $OutputDirectory"
-    7z.exe x $ArchivePath -o"$OutputDirectory" -y
+    7z x $ArchivePath -o"$OutputDirectory" -y
 }
