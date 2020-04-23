@@ -1,5 +1,5 @@
 jobs:
-- job:
+- job: Test_Node_$(Platform)
   pool: 
     name: Azure Pipelines
     vmImage: $(VmImage)
@@ -21,11 +21,11 @@ jobs:
     inputs:
       source: 'current'
       artifact: 'node-$(Version)-$(Platform)-$(Architecture)'
-      path: $(Build.BinariesDirectory)
+      path: $(Build.ArtifactStagingDirectory)
 
   - task: ExtractFiles@1
     inputs:
-      archiveFilePatterns: '$(Build.BinariesDirectory)/node-$(Version)-$(Platform)-$(Architecture).zip'
+      archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/node-$(Version)-$(Platform)-$(Architecture).zip'
       destinationFolder: $(Build.BinariesDirectory)
       cleanDestinationFolder: false
 
