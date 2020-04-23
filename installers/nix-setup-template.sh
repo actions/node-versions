@@ -21,7 +21,5 @@ echo "Copy Node.js binaries to hostedtoolcache folder"
 cp -R ./* $NODE_TOOLCACHE_VERSION_ARCH_PATH
 rm $NODE_TOOLCACHE_VERSION_ARCH_PATH/setup.sh
 
-ls $NODE_TOOLCACHE_VERSION_ARCH_PATH
-
 echo "Create complete file"
 touch $NODE_TOOLCACHE_VERSION_PATH/x64.complete

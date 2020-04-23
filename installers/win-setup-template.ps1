@@ -33,7 +33,5 @@ Write-Host "Copy Node.js binaries to hostedtoolcache folder"
 Copy-Item -Path * -Destination $NodeToolcacheArchitecturePath
 Remove-Item $NodeToolcacheArchitecturePath\setup.ps1 -Force | Out-Null
 
-Get-ChildItem $NodeToolcacheArchitecturePath
-
 Write-Host "Create complete file"
 New-Item -ItemType File -Path $NodeToolcacheVersionPath -Name "$Architecture.complete" | Out-Null
