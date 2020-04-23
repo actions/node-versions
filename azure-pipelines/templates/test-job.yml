@@ -1,5 +1,5 @@
 jobs:
-- job: Test_Node_$(Platform)
+- job: Test_Node
   pool: 
     name: Azure Pipelines
     vmImage: $(VmImage)

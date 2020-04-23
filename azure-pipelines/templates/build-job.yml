@@ -1,5 +1,5 @@
 jobs:
-- job: Build_Node_$(Platform)
+- job: Build_Node
   timeoutInMinutes: 90
   pool:
     name: Azure Pipelines
