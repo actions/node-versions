@@ -20,6 +20,11 @@ Describe "Node.js" {
         "node --version" | Should -ReturnZeroExitCode
     }
 
+    It "version is correct" {
+        $versionOutput = Invoke-Expression "node --version"
+        $versionOutput | Should -Match $Version
+    }
+
     It "is used from tool-cache" {
         $nodePath = (Get-Command "node").Path
         $nodePath | Should -Not -BeNullOrEmpty

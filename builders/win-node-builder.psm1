@@ -44,7 +44,6 @@ class WinNodeBuilder : NodeBuilder {
         $extractTargetDirectory = Join-Path $this.TempFolderLocation "tempExtract"
         Extract-7ZipArchive -ArchivePath $archivePath -OutputDirectory $extractTargetDirectory
         $nodeOutputPath = Get-Item $extractTargetDirectory\* | Select-Object -First 1 -ExpandProperty Fullname
-        Write-Host $nodeOutputPath
         Move-Item -Path $nodeOutputPath\* -Destination $this.ArtifactLocation
     }
 
