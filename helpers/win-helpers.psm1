@@ -29,6 +29,6 @@ function Create-SevenZipArchive {
     
     Push-Location $SourceFolder
     Write-Debug "7z a $ArchiveTypeArgument $CompressionLevelArgument $ArchivePath @$SourceFolder"
-    7z a $ArchiveTypeArgument $CompressionLevelArgument $ArchivePath $SourceFolder
+    7z a $ArchiveTypeArgument $CompressionLevelArgument $ArchivePath $SourceFolder\*
     Pop-Location
 }
