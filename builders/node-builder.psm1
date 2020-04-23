@@ -83,11 +83,9 @@ class NodeBuilder {
 
         Write-Host "Download Node.js $($this.Version) [$($this.Architecture)] executable..."
         $binariesArchivePath = $this.Download()
-        $binariesArchiveDirectory = [IO.Path]::GetDirectoryName($binariesArchivePath)
-        $toolArchivePath = Join-Path $binariesArchiveDirectory $this.OutputArtifactName
 
-        Write-Host "Rename '$binariesArchivePath' to '$toolArchivePath'"
-        Rename-Item -Path $binariesArchivePath -NewName $toolArchivePath
+        Write-Host "Unpack binaries to target directory"
+        $this.UnpackBinaries($binariesArchivePath)
 
         Write-Host "Create installation script..."
         $this.CreateInstallationScript()
