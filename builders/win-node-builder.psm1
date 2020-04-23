@@ -27,7 +27,7 @@ class WinNodeBuilder : NodeBuilder {
     ) : Base($version, $platform, $architecture) {
         $this.InstallationTemplateName = "win-setup-template.ps1"
         $this.InstallationScriptName = "setup.ps1"
-        $this.OutputArtifactName = "tool.7z"
+        $this.OutputArtifactName = "node-$Version-$Platform-$Architecture.zip"
     }
 
     [uri] GetBinariesUri() {
@@ -42,9 +42,9 @@ class WinNodeBuilder : NodeBuilder {
 
     [void] ExtractBinaries($archivePath) {
         $extractTargetDirectory = Join-Path $this.TempFolderLocation "tempExtract"
-        Extract-7ZipArchive -ArchivePath $archivePath -OutputDirectory $extractTargetDirectory
+        Extract-SevenZipArchive -ArchivePath $archivePath -OutputDirectory $extractTargetDirectory
         $nodeOutputPath = Get-Item $extractTargetDirectory\* | Select-Object -First 1 -ExpandProperty Fullname
-        Move-Item -Path $nodeOutputPath\* -Destination $this.ArtifactLocation
+        Move-Item -Path $nodeOutputPath\* -Destination $this.WorkFolderLocation
     }
 
     [void] CreateInstallationScript() {
@@ -53,7 +53,7 @@ class WinNodeBuilder : NodeBuilder {
         Create Node.js artifact installation script based on specified template.
         #>
 
-        $installationScriptLocation = New-Item -Path $this.ArtifactLocation -Name $this.InstallationScriptName -ItemType File
+        $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File
         $installationTemplateLocation = Join-Path -Path $this.InstallationTemplatesLocation -ChildPath $this.InstallationTemplateName
         $installationTemplateContent = Get-Content -Path $installationTemplateLocation -Raw
 
@@ -65,5 +65,10 @@ class WinNodeBuilder : NodeBuilder {
         $variablesToReplace.keys | ForEach-Object { $installationTemplateContent = $installationTemplateContent.Replace($_, $variablesToReplace[$_]) }
         $installationTemplateContent | Out-File -FilePath $installationScriptLocation
         Write-Debug "Done; Installation script location: $installationScriptLocation)"
+    }
+
+    [void] ArchiveArtifact() {
+        $OutputPath = Join-Path $this.ArtifactFolderLocation $this.OutputArtifactName
+        Create-SevenZipArchive -SourceFolder $this.WorkFolderLocation -ArchivePath $OutputPath
     }
 }
