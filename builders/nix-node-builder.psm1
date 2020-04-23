@@ -40,8 +40,8 @@ class NixNodeBuilder : NodeBuilder {
         return "${base}/v$($this.Version)/node-v$($this.Version)-$($this.Platform)-$($this.Architecture).tar.gz"
     }
 
-    [void] UnpackBinaries($archivePath) {
-        Unpack-TarArchive -ArchivePath $archivePath -OutputDirectory $this.ArtifactLocation
+    [void] ExtractBinaries($archivePath) {
+        Extract-TarArchive -ArchivePath $archivePath -OutputDirectory $this.ArtifactLocation
     }
 
     [void] CreateInstallationScript() {

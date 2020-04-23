@@ -40,8 +40,8 @@ class WinNodeBuilder : NodeBuilder {
         return "${base}/v$($this.Version)/node-v$($this.Version)-win-$($this.Architecture).7z"
     }
 
-    [void] UnpackBinaries($archivePath) {
-        Unpack-7ZipArchive -ArchivePath $archivePath -OutputDirectory $this.ArtifactLocation
+    [void] ExtractBinaries($archivePath) {
+        Extract-7ZipArchive -ArchivePath $archivePath -OutputDirectory $this.ArtifactLocation
     }
 
     [void] CreateInstallationScript() {

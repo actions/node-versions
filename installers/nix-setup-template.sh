@@ -18,14 +18,10 @@ echo "Create Node.js $NODE_VERSION folder"
 mkdir -p $NODE_TOOLCACHE_VERSION_ARCH_PATH
 
 echo "Copy Node.js binaries to hostedtoolcache folder"
-cp ./tool.tar.gz $NODE_TOOLCACHE_VERSION_ARCH_PATH
+cp ./* $NODE_TOOLCACHE_VERSION_ARCH_PATH
+rm $NODE_TOOLCACHE_VERSION_ARCH_PATH/setup.sh
 
-cd $NODE_TOOLCACHE_VERSION_ARCH_PATH
-
-echo "Unzip Node.js to $NODE_TOOLCACHE_VERSION_ARCH_PATH"
-tar -zxf tool.tar.gz -C . --strip 1
-echo "Node.js unzipped successfully"
-rm tool.tar.gz
+ls $NODE_TOOLCACHE_VERSION_ARCH_PATH
 
 echo "Create complete file"
 touch $NODE_TOOLCACHE_VERSION_PATH/x64.complete

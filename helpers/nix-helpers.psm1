@@ -2,7 +2,7 @@
 .SYNOPSIS
 Unpack *.tar file
 #>
-function Unpack-TarArchive {
+function Extract-TarArchive {
     param(
         [Parameter(Mandatory=$true)]
         [String]$ArchivePath,
@@ -10,7 +10,7 @@ function Unpack-TarArchive {
         [String]$OutputDirectory
     )
 
-    Write-Debug "Unpack $ArchivePath to $OutputDirectory"
-    tar -C $OutputDirectory -xzf $ArchivePath
+    Write-Debug "Extract $ArchivePath to $OutputDirectory"
+    tar -C $OutputDirectory -xzf $ArchivePath --strip 1
 
 }

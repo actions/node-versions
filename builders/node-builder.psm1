@@ -85,7 +85,7 @@ class NodeBuilder {
         $binariesArchivePath = $this.Download()
 
         Write-Host "Unpack binaries to target directory"
-        $this.UnpackBinaries($binariesArchivePath)
+        $this.ExtractBinaries($binariesArchivePath)
 
         Write-Host "Create installation script..."
         $this.CreateInstallationScript()
