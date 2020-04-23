@@ -34,6 +34,8 @@ jobs:
     inputs:
       targetType: inline
       script: |
+        $pwd
+        Get-ChildItem
         if ("$(Platform)" -match 'win32') { powershell ./setup.ps1 } else { sh ./setup.sh }
       workingDirectory: '$(Build.BinariesDirectory)'
 

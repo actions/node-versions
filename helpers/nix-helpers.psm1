@@ -25,6 +25,8 @@ function Create-TarArchive {
 
     $CompressionTypeArgument = If ([string]::IsNullOrWhiteSpace($CompressionType)) { "" } else { "--${CompressionType}" }
 
-    Write-Debug "tar -c $CompressionTypeArgument -f $ArchivePath $SourceFolder"
-    tar -c $CompressionTypeArgument -f $ArchivePath $SourceFolder
+    Push-Location $SourceFolder
+    Write-Debug "tar -c $CompressionTypeArgument -f $ArchivePath ."
+    tar -c $CompressionTypeArgument -f $ArchivePath .
+    Pop-Location
 }
