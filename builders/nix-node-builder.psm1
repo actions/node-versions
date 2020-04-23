@@ -27,7 +27,7 @@ class NixNodeBuilder : NodeBuilder {
     ) : Base($version, $platform, $architecture) {
         $this.InstallationTemplateName = "nix-setup-template.sh"
         $this.InstallationScriptName = "setup.sh"
-        $this.OutputArtifactName = "tool.tar.gz"
+        $this.OutputArtifactName = "node-$Version-$Platform-$Architecture.tar.gz"
     }
 
     [uri] GetBinariesUri() {
@@ -41,7 +41,7 @@ class NixNodeBuilder : NodeBuilder {
     }
 
     [void] ExtractBinaries($archivePath) {
-        Extract-TarArchive -ArchivePath $archivePath -OutputDirectory $this.ArtifactLocation
+        Extract-TarArchive -ArchivePath $archivePath -OutputDirectory $this.WorkFolderLocation
     }
 
     [void] CreateInstallationScript() {
@@ -50,7 +50,7 @@ class NixNodeBuilder : NodeBuilder {
         Create Node.js artifact installation script based on template specified in InstallationTemplateName property.
         #>
 
-        $installationScriptLocation = New-Item -Path $this.ArtifactLocation -Name $this.InstallationScriptName -ItemType File
+        $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File
         $installationTemplateLocation = Join-Path -Path $this.InstallationTemplatesLocation -ChildPath $this.InstallationTemplateName
 
         $installationTemplateContent = Get-Content -Path $installationTemplateLocation -Raw
@@ -58,5 +58,10 @@ class NixNodeBuilder : NodeBuilder {
         $installationTemplateContent | Out-File -FilePath $installationScriptLocation
 
         Write-Debug "Done; Installation script location: $installationScriptLocation)"
+    }
+
+    [void] ArchiveArtifact() {
+        $OutputPath = Join-Path $this.ArtifactFolderLocation $this.OutputArtifactName
+        Create-TarArchive -SourceFolder $this.WorkFolderLocation -ArchivePath $OutputPath
     }
 }

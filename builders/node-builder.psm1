@@ -30,7 +30,8 @@ class NodeBuilder {
     [string] $Platform
     [string] $Architecture
     [string] $TempFolderLocation
-    [string] $ArtifactLocation
+    [string] $WorkFolderLocation
+    [string] $ArtifactFolderLocation
     [string] $InstallationTemplatesLocation
 
     NodeBuilder ([version] $version, [string] $platform, [string] $architecture) {
@@ -38,8 +39,10 @@ class NodeBuilder {
         $this.Platform = $platform
         $this.Architecture = $architecture
 
-        $this.ArtifactLocation = $env:BUILD_BINARIESDIRECTORY
-        $this.TempFolderLocation = $env:BUILD_STAGINGDIRECTORY
+        $this.TempFolderLocation = [IO.Path]::GetTempPath()
+        $this.WorkFolderLocation = $env:BUILD_BINARIESDIRECTORY
+        $this.ArtifactFolderLocation = $env:BUILD_STAGINGDIRECTORY
+        
 
         $this.InstallationTemplatesLocation = Join-Path -Path $PSScriptRoot -ChildPath "../installers"
     }
@@ -89,5 +92,8 @@ class NodeBuilder {
 
         Write-Host "Create installation script..."
         $this.CreateInstallationScript()
+
+        Write-Host "Archive artifact"
+        $this.ArchiveArtifact()
     }
 }

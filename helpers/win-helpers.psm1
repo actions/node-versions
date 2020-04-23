@@ -2,7 +2,7 @@
 .SYNOPSIS
 Unpack *.7z file
 #>
-function Extract-7ZipArchive {
+function Extract-SevenZipArchive {
     param(
         [Parameter(Mandatory=$true)]
         [String]$ArchivePath,
@@ -12,4 +12,18 @@ function Extract-7ZipArchive {
 
     Write-Debug "Extract $ArchivePath to $OutputDirectory"
     7z x $ArchivePath -o"$OutputDirectory" -y | Out-Null
+}
+
+function Create-SevenZipArchive {
+    param(
+        [Parameter(Mandatory=$true)]
+        [String]$SourceFolder,
+        [Parameter(Mandatory=$true)]
+        [String]$ArchivePath,
+        [String]$ArchiveType = "zip"
+    )
+
+    $ArchiveTypeArgument = "-t${ArchiveType}"
+
+    7z a $ArchiveTypeArgument $ArchivePath "$SourceFolder\*.*" -r
 }
