@@ -18,7 +18,7 @@ echo "Create Node.js $NODE_VERSION folder"
 mkdir -p $NODE_TOOLCACHE_VERSION_ARCH_PATH
 
 echo "Copy Node.js binaries to hostedtoolcache folder"
-cp ./* $NODE_TOOLCACHE_VERSION_ARCH_PATH
+cp -R ./* $NODE_TOOLCACHE_VERSION_ARCH_PATH
 rm $NODE_TOOLCACHE_VERSION_ARCH_PATH/setup.sh
 
 ls $NODE_TOOLCACHE_VERSION_ARCH_PATH

@@ -1,4 +1,5 @@
 $ErrorActionPreference = "Stop"
+
 [Version]$Version = "{{__VERSION__}}"
 [string]$Architecture = "{{__ARCHITECTURE__}}"
 $ArchiveFileName = "tool.7z"
@@ -29,16 +30,10 @@ if (-not (Test-Path $NodeToolcacheArchitecturePath)) {
 }
 
 Write-Host "Copy Node.js binaries to hostedtoolcache folder"
-Copy-Item -Path $ArchiveFileName -Destination $NodeToolcacheArchitecturePath
+Copy-Item -Path * -Destination $NodeToolcacheArchitecturePath
+Remove-Item $NodeToolcacheArchitecturePath\setup.ps1 -Force | Out-Null
 
-Set-Location $NodeToolcacheArchitecturePath
-Write-Host "Unzip Node.js to $NodeToolcacheArchitecturePath"
-7z.exe x $ArchiveFileName -o"$TempDirectory" -y | Out-Null
-$NodeInnerFolder = Get-Item -Path "$TempDirectory\node-*" | Select-Object -First 1
-Get-ChildItem $NodeInnerFolder | Move-Item -Destination $NodeToolcacheArchitecturePath
-Write-Host "Node.js unzipped successfully"
-
-Remove-Item $ArchiveFileName -Force | Out-Null
+Get-ChildItem $NodeToolcacheArchitecturePath
 
 Write-Host "Create complete file"
 New-Item -ItemType File -Path $NodeToolcacheVersionPath -Name "$Architecture.complete" | Out-Null
