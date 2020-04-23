@@ -1,0 +1,78 @@
+jobs:
+- job: Test_Node
+  pool: 
+    name: Azure Pipelines
+    vmImage: $(VmImage)
+  steps:
+  - checkout: self
+    submodules: true
+
+  - task: PowerShell@2
+    displayName: Fully cleanup the toolcache directory
+    inputs:
+      TargetType: inline
+      script: |
+        $NodeToolcachePath = Join-Path -Path $env:AGENT_TOOLSDIRECTORY -ChildPath "node"
+        if (Test-Path $NodeToolcachePath) {
+          Remove-Item -Path $NodeToolcachePath -Recurse -Force
+        }
+
+  - task: DownloadPipelineArtifact@2
+    inputs:
+      source: 'current'
+      artifact: 'node-$(Version)-$(Platform)-$(Architecture)'
+      path: $(Build.ArtifactStagingDirectory)
+
+  - task: ExtractFiles@1
+    inputs:
+      archiveFilePatterns: '$(Build.ArtifactStagingDirectory)/node-$(Version)-$(Platform)-$(Architecture).zip'
+      destinationFolder: $(Build.BinariesDirectory)
+      cleanDestinationFolder: false
+
+  - task: PowerShell@2
+    displayName: 'Apply build artifact to the local machines'
+    inputs:
+      targetType: inline
+      script: |
+        if ("$(Platform)" -match 'win32') { powershell ./setup.ps1 } else { sh ./setup.sh }
+      workingDirectory: '$(Build.BinariesDirectory)'
+
+  - task: NodeTool@0
+    displayName: 'Use Node $(Version)'
+    inputs:
+      versionSpec: $(Version)
+
+  - task: PowerShell@2
+    displayName: 'Wait for the logs'
+    inputs:
+      targetType: inline
+      script: |
+         Write-Host "Fake step that do nothing"
+         Write-Host "We need it because log of previous step 'Use Node' is not available here yet."
+         Write-Host "In testing step (Node.Tests.ps1) we analyze build log of 'Use Node' task"
+         Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
+  - task: PowerShell@2
+    displayName: 'Run tests'
+    inputs:
+      TargetType: inline
+      script: |
+        Install-Module Pester -Force -Scope CurrentUser
+        Import-Module Pester
+        $pesterParams = @{
+          Path="./Node.Tests.ps1";
+          Parameters=@{
+            Version="$(Version)";
+          }
+        }
+        Invoke-Pester -Script $pesterParams -OutputFile "test_results.xml" -OutputFormat NUnitXml
+      workingDirectory: '$(Build.SourcesDirectory)/tests'
+
+  - task: PublishTestResults@2
+    displayName: 'Publish test results'
+    inputs:
+      testResultsFiles: '*.xml'
+      testResultsFormat: NUnit
+      searchFolder: 'tests'
+      failTaskOnFailedTests: true
+      testRunTitle: "Node.js $(Version)-$(Platform)"
+    condition: always()
