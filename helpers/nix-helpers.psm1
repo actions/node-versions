@@ -23,7 +23,8 @@ function Create-TarArchive {
         [string]$CompressionType = "gz"
     )
 
-    $CompressionArgument = If ([string]::IsNullOrWhiteSpace($CompressionType)) { "" } else { "--${CompressionType}" }
+    $CompressionTypeArgument = If ([string]::IsNullOrWhiteSpace($CompressionType)) { "" } else { "--${CompressionType}" }
 
-    tar -c $CompressionArgument -f $ArchivePath "$SourceFolder/*.*"
+    Write-Debug "tar -c $CompressionTypeArgument -f $ArchivePath $SourceFolder"
+    tar -c $CompressionTypeArgument -f $ArchivePath $SourceFolder
 }
