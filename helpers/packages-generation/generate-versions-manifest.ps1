@@ -41,6 +41,18 @@ if ($PlatformMapFile -and (Test-Path $PlatformMapFile)) {
     $PlatformMap = @{}
 }
 
+function Get-FileNameWithoutExtension {
+    param (
+        [Parameter(Mandatory)][string]$Filename
+    )
+
+    if ($Filename.EndsWith(".tar.gz")) {
+        $Filename = [IO.path]::GetFileNameWithoutExtension($Filename)
+    }
+
+    return [IO.path]::GetFileNameWithoutExtension($Filename)
+}
+
 function New-AssetItem {
     param (
         [Parameter(Mandatory)][string]$Filename,
@@ -69,7 +81,8 @@ function Build-AssetsList {
     
     $assets = @()
     foreach($releaseAsset in $ReleaseAssets) {
-        $parts = [IO.path]::GetFileNameWithoutExtension($releaseAsset.name).Split("-")
+        $filename = Get-FileNameWithoutExtension -Filename $releaseAsset.name
+        $parts = $filename.Split("-")
         $arch = $parts[-1]
         $buildPlatform = [string]::Join("-", $parts[2..($parts.Length-2)])
 
