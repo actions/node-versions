@@ -27,7 +27,7 @@ class WinNodeBuilder : NodeBuilder {
     ) : Base($version, $platform, $architecture) {
         $this.InstallationTemplateName = "win-setup-template.ps1"
         $this.InstallationScriptName = "setup.ps1"
-        $this.OutputArtifactName = "node-$Version-$Platform-$Architecture.zip"
+        $this.OutputArtifactName = "node-$Version-$Platform-$Architecture.7z"
     }
 
     [uri] GetBinariesUri() {
@@ -69,6 +69,6 @@ class WinNodeBuilder : NodeBuilder {
 
     [void] ArchiveArtifact() {
         $OutputPath = Join-Path $this.ArtifactFolderLocation $this.OutputArtifactName
-        Create-SevenZipArchive -SourceFolder $this.WorkFolderLocation -ArchivePath $OutputPath
+        Create-SevenZipArchive -SourceFolder $this.WorkFolderLocation -ArchivePath $OutputPath -ArchiveType "7z"
     }
 }
