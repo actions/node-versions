@@ -2,8 +2,6 @@ $ErrorActionPreference = "Stop"
 
 [Version]$Version = "{{__VERSION__}}"
 [string]$Architecture = "{{__ARCHITECTURE__}}"
-$ArchiveFileName = "tool.7z"
-$TempDirectory = Join-Path $env:TEMP "Node"
 
 $ToolcacheRoot = $env:AGENT_TOOLSDIRECTORY
 if ([string]::IsNullOrEmpty($ToolcacheRoot)) {
@@ -30,7 +28,7 @@ if (-not (Test-Path $NodeToolcacheArchitecturePath)) {
 }
 
 Write-Host "Copy Node.js binaries to hostedtoolcache folder"
-Copy-Item -Path * -Destination $NodeToolcacheArchitecturePath
+Copy-Item -Path * -Destination $NodeToolcacheArchitecturePath -Recurse
 Remove-Item $NodeToolcacheArchitecturePath\setup.ps1 -Force | Out-Null
 
 Write-Host "Create complete file"
