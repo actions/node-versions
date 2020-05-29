@@ -3,7 +3,7 @@ param (
     $Version
 )
 
-Import-Module (Join-Path $PSScriptRoot "../helpers/packages-generation/pester-extensions.psm1")
+Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 function Get-UseNodeLogs {
     $logsFolderPath = Join-Path -Path $env:AGENT_HOMEDIRECTORY -ChildPath "_diag" | Join-Path -ChildPath "pages"

@@ -20,13 +20,25 @@ function Create-TarArchive {
         [String]$SourceFolder,
         [Parameter(Mandatory=$true)]
         [String]$ArchivePath,
-        [string]$CompressionType = "gz"
+        [string]$CompressionType = "gz",
+        [switch]$DereferenceSymlinks
     )
 
-    $CompressionTypeArgument = If ([string]::IsNullOrWhiteSpace($CompressionType)) { "" } else { "--${CompressionType}" }
+    $arguments = @(
+        "-c",
+        "-f", $ArchivePath,
+        "."
+    )
+    If ($CompressionType) {
+        $arguments += "--${CompressionType}"
+    }
+
+    if ($DereferenceSymlinks) {
+        $arguments += "-h"
+    }
 
     Push-Location $SourceFolder
-    Write-Debug "tar -c $CompressionTypeArgument -f $ArchivePath ."
-    tar -c $CompressionTypeArgument -f $ArchivePath .
+    Write-Debug "tar $arguments"
+    tar @arguments
     Pop-Location
 }

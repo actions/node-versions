@@ -21,14 +21,19 @@ function Create-SevenZipArchive {
         [Parameter(Mandatory=$true)]
         [String]$ArchivePath,
         [String]$ArchiveType = "zip",
-        [String]$CompressionLevel = 5
+        [String]$CompressionLevel = 5,
+        [switch]$IncludeSymlinks
     )
 
-    $ArchiveTypeArgument = "-t${ArchiveType}"
-    $CompressionLevelArgument = "-mx=${CompressionLevel}"
-    
+    $ArchiveTypeArguments = @(
+        "-t${ArchiveType}",
+        "-mx=${CompressionLevel}"
+    )
+    if ($IncludeSymlinks) {
+        $ArchiveTypeArguments += "-snl"
+    }
     Push-Location $SourceFolder
-    Write-Debug "7z a $ArchiveTypeArgument $CompressionLevelArgument $ArchivePath @$SourceFolder"
-    7z a $ArchiveTypeArgument $CompressionLevelArgument $ArchivePath $SourceFolder\*
+    Write-Debug "7z a $ArchiveTypeArgument $ArchivePath @$SourceFolder"
+    7z a @ArchiveTypeArguments $ArchivePath $SourceFolder\*
     Pop-Location
 }
