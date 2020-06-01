@@ -25,17 +25,14 @@ function Create-TarArchive {
     )
 
     $arguments = @(
-        "-c",
-        "-f", $ArchivePath,
-        "."
+        "-c", "--$CompressionType"
     )
-    If ($CompressionType) {
-        $arguments += "--${CompressionType}"
-    }
 
     if ($DereferenceSymlinks) {
         $arguments += "-h"
     }
+
+    $arguments += @("-f", $ArchivePath, ".")
 
     Push-Location $SourceFolder
     Write-Debug "tar $arguments"
