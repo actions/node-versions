@@ -1,0 +1,7 @@
+{
+    "regex": "node-\\d+\\.\\d+\\.\\d+-(\\w+)-(x\\d+)",
+    "groups": {
+        "arch": 2,
+        "platform": 1
+    }
+}

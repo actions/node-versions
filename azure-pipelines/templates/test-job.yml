@@ -10,12 +10,9 @@ jobs:
   - task: PowerShell@2
     displayName: Fully cleanup the toolcache directory before testing
     inputs:
-      TargetType: inline
-      script: |
-        $NodeToolcachePath = Join-Path -Path $env:AGENT_TOOLSDIRECTORY -ChildPath "node"
-        if (Test-Path $NodeToolcachePath) {
-          Remove-Item -Path $NodeToolcachePath -Recurse -Force
-        }
+      targetType: filePath
+      filePath: helpers/clean-toolcache.ps1
+      arguments: -ToolName "node"
 
   - task: DownloadPipelineArtifact@2
     inputs:
@@ -56,7 +53,7 @@ jobs:
     inputs:
       TargetType: inline
       script: |
-        Install-Module Pester -Force -Scope CurrentUser
+        Install-Module Pester -Force -Scope CurrentUser -RequiredVersion 4.10.1
         Import-Module Pester
         $pesterParams = @{
           Path="./Node.Tests.ps1";
