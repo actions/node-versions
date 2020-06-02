@@ -53,7 +53,7 @@ jobs:
     inputs:
       TargetType: inline
       script: |
-        Install-Module Pester -Force -Scope CurrentUser
+        Install-Module Pester -Force -Scope CurrentUser -RequiredVersion 4.10.1
         Import-Module Pester
         $pesterParams = @{
           Path="./Node.Tests.ps1";
