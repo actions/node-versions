@@ -1,5 +1,30 @@
 [
   {
+    "version": "14.5.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.5.0-20200707.1",
+    "files": [
+      {
+        "filename": "node-14.5.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.5.0-20200707.1/node-14.5.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.5.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.5.0-20200707.1/node-14.5.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.5.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.5.0-20200707.1/node-14.5.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "14.4.0",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/14.4.0-20200603.1",
@@ -171,6 +196,31 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/13.13.0-20200507.97/node-13.13.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "12.18.2",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/12.18.2-20200707.2",
+    "files": [
+      {
+        "filename": "node-12.18.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.18.2-20200707.2/node-12.18.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.18.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.18.2-20200707.2/node-12.18.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.18.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.18.2-20200707.2/node-12.18.2-win32-x64.7z"
       }
     ]
   },
