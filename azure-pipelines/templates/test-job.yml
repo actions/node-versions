@@ -48,6 +48,9 @@ jobs:
          Write-Host "We need it because log of previous step 'Use Node' is not available here yet."
          Write-Host "In testing step (Node.Tests.ps1) we analyze build log of 'Use Node' task"
          Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
+         foreach ($process in Get-Process) {
+          Write-Host "Active process name: $($process.ProcessName)"
+        }
   - task: PowerShell@2
     displayName: 'Run tests'
     inputs:
