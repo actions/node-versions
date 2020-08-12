@@ -50,7 +50,7 @@ jobs:
          Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
          foreach ($process in Get-Process) {
           Write-Host "Active process name: $($process.ProcessName)"
-        }
+         }
   - task: PowerShell@2
     displayName: 'Run tests'
     inputs:
