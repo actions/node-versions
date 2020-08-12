@@ -1,5 +1,30 @@
 [
   {
+    "version": "14.8.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.8.0-20200812.4",
+    "files": [
+      {
+        "filename": "node-14.8.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.8.0-20200812.4/node-14.8.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.8.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.8.0-20200812.4/node-14.8.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.8.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.8.0-20200812.4/node-14.8.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "14.7.0",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/14.7.0-20200730.1",
