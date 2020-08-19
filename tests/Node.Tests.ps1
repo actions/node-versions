@@ -6,11 +6,17 @@ param (
 Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 function Get-UseNodeLogs {
-    $logsFolderPath = Join-Path -Path $env:AGENT_HOMEDIRECTORY -ChildPath "_diag" | Join-Path -ChildPath "pages"
+    $homeDir = $env:HOME
+    if ([string]::IsNullOrEmpty($homeDir)) {
+        # GitHub Windows images don't have `HOME` variable
+        $homeDir = $env:HOMEDRIVE
+    }
+
+    $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
 
     $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
         $logContent = Get-Content $_.Fullname -Raw
-        return $logContent -match "Use Node"
+        return $logContent -match "setup-node@v"
     } | Select-Object -First 1
     return $useNodeLogFile.Fullname
 }
@@ -37,7 +43,7 @@ Describe "Node.js" {
         $useNodeLogFile = Get-UseNodeLogs
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
-        $useNodeLogContent | Should -Match "Found tool in cache"
+        $useNodeLogContent | Should -Match "Found in cache"
     }
 
     It "Run simple code" {

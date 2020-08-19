@@ -40,8 +40,8 @@ class NodeBuilder {
         $this.Architecture = $architecture
 
         $this.TempFolderLocation = [IO.Path]::GetTempPath()
-        $this.WorkFolderLocation = $env:BUILD_BINARIESDIRECTORY
-        $this.ArtifactFolderLocation = $env:BUILD_STAGINGDIRECTORY
+        $this.WorkFolderLocation = $env:BINARIES_DIRECTORY
+        $this.ArtifactFolderLocation = $env:ARTIFACT_DIRECTORY
         
 
         $this.InstallationTemplatesLocation = Join-Path -Path $PSScriptRoot -ChildPath "../installers"
