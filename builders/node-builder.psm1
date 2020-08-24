@@ -19,10 +19,10 @@ class NodeBuilder {
     The location of temporary files that will be used during Node.js package generation.
 
     .PARAMETER WorkFolderLocation
-    The location of installation files. Using environment BINARIES_DIRECTORY variable value.
+    The location of installation files.
 
     .PARAMETER ArtifactFolderLocation
-    The location of generated Node.js artifact. Using environment ARTIFACT_DIRECTORY variable value.
+    The location of generated Node.js artifact.
 
     .PARAMETER InstallationTemplatesLocation
     The location of installation script template. Using "installers" folder from current repository.
@@ -43,9 +43,8 @@ class NodeBuilder {
         $this.Architecture = $architecture
 
         $this.TempFolderLocation = [IO.Path]::GetTempPath()
-        $this.WorkFolderLocation = $env:BINARIES_DIRECTORY
-        $this.ArtifactFolderLocation = $env:ARTIFACT_DIRECTORY
-        
+        $this.WorkFolderLocation = Join-Path $env:RUNNER_TEMP "binaries"
+        $this.ArtifactFolderLocation = Join-Path $env:RUNNER_TEMP "artifact"
 
         $this.InstallationTemplatesLocation = Join-Path -Path $PSScriptRoot -ChildPath "../installers"
     }
@@ -86,6 +85,10 @@ class NodeBuilder {
         .SYNOPSIS
         Generates Node.js artifact from downloaded binaries.
         #>
+
+        Write-Host "Create WorkFolderLocation and ArtifactFolderLocation folders"
+        New-Item -Path $this.WorkFolderLocation -ItemType "directory"
+        New-Item -Path $this.ArtifactFolderLocation -ItemType "directory"
 
         Write-Host "Download Node.js $($this.Version) [$($this.Architecture)] executable..."
         $binariesArchivePath = $this.Download()
