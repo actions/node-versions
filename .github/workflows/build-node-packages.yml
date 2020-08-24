@@ -104,15 +104,9 @@ jobs:
 
     - name: Run tests
       run: |
-        Install-Module Pester -Force -Scope CurrentUser -RequiredVersion 4.10.1
+        Install-Module Pester -Force -Scope CurrentUser
         Import-Module Pester
-        $pesterParams = @{
-          Path="./Node.Tests.ps1";
-          Parameters=@{
-            Version="$env:VERSION";
-          }
-        }
-        Invoke-Pester -Script $pesterParams -EnableExit
+        Invoke-Pester -Script ./Node.Tests.ps1 -EnableExit
       working-directory: ./tests
 
   publish_release:

@@ -1,20 +1,17 @@
-param (
-    [Version] [Parameter (Mandatory = $true)] [ValidateNotNullOrEmpty()]
-    $Version
-)
-
 Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
-function Get-UseNodeLogs {
-    # GitHub Windows images don't have `HOME` variable
-    $homeDir = $env:HOME ?? $env:HOMEDRIVE
-    $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+BeforeAll {
+    function Get-UseNodeLogs {
+        # GitHub Windows images don't have `HOME` variable
+        $homeDir = $env:HOME ?? $env:HOMEDRIVE
+        $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
 
-    $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
-        $logContent = Get-Content $_.Fullname -Raw
-        return $logContent -match "setup-node@v"
-    } | Select-Object -First 1
-    return $useNodeLogFile.Fullname
+        $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
+            $logContent = Get-Content $_.Fullname -Raw
+            return $logContent -match "setup-node@v"
+        } | Select-Object -First 1
+        return $useNodeLogFile.Fullname
+    }
 }
 
 Describe "Node.js" {
@@ -24,7 +21,7 @@ Describe "Node.js" {
 
     It "version is correct" {
         $versionOutput = Invoke-Expression "node --version"
-        $versionOutput | Should -Match $Version
+        $versionOutput | Should -Match $env:VERSION
     }
 
     It "is used from tool-cache" {
