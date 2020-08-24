@@ -6,12 +6,8 @@ param (
 Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 function Get-UseNodeLogs {
-    $homeDir = $env:HOME
-    if ([string]::IsNullOrEmpty($homeDir)) {
-        # GitHub Windows images don't have `HOME` variable
-        $homeDir = $env:HOMEDRIVE
-    }
-
+    # GitHub Windows images don't have `HOME` variable
+    $homeDir = $env:HOME ?? $env:HOMEDRIVE
     $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
 
     $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
@@ -34,7 +30,10 @@ Describe "Node.js" {
     It "is used from tool-cache" {
         $nodePath = (Get-Command "node").Path
         $nodePath | Should -Not -BeNullOrEmpty
-        $expectedPath = Join-Path -Path $env:AGENT_TOOLSDIRECTORY -ChildPath "node"
+        
+        # GitHub Windows images don't have `AGENT_TOOLSDIRECTORY` variable
+        $toolcacheDir = $env:AGENT_TOOLSDIRECTORY ?? $env:RUNNER_TOOL_CACHE
+        $expectedPath = Join-Path -Path $toolcacheDir -ChildPath "node"
         $nodePath.startsWith($expectedPath) | Should -BeTrue -Because "'$nodePath' is not started with '$expectedPath'"
     }
 

@@ -16,10 +16,13 @@ class NodeBuilder {
     The architecture with which Node.js should be built.
 
     .PARAMETER TempFolderLocation
-    The location of temporary files that will be used during Node.js package generation. Using system BUILD_STAGINGDIRECTORY variable value.
+    The location of temporary files that will be used during Node.js package generation.
 
-    .PARAMETER ArtifactLocation
-    The location of generated Node.js artifact. Using system environment BUILD_BINARIESDIRECTORY variable value.
+    .PARAMETER WorkFolderLocation
+    The location of installation files. Using environment BINARIES_DIRECTORY variable value.
+
+    .PARAMETER ArtifactFolderLocation
+    The location of generated Node.js artifact. Using environment ARTIFACT_DIRECTORY variable value.
 
     .PARAMETER InstallationTemplatesLocation
     The location of installation script template. Using "installers" folder from current repository.

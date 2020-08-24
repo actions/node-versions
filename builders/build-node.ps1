@@ -28,6 +28,14 @@ param(
 Import-Module (Join-Path $PSScriptRoot "../helpers" | Join-Path -ChildPath "nix-helpers.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "../helpers" | Join-Path -ChildPath "win-helpers.psm1") -DisableNameChecking
 
+function Create-ArtifactDirectories {
+    $env:BINARIES_DIRECTORY = Join-Path $env:RUNNER_TEMP "binaries"
+    New-Item -Path $env:BINARIES_DIRECTORY -ItemType "directory"
+
+    $env:ARTIFACT_DIRECTORY = Join-Path $env:RUNNER_TEMP "artifact"
+    New-Item -Path $env:ARTIFACT_DIRECTORY -ItemType "directory"
+}
+
 function Get-NodeBuilder {
     <#
     .SYNOPSIS
@@ -65,6 +73,8 @@ function Get-NodeBuilder {
 
     return $builder
 }
+
+Create-ArtifactDirectories
 
 ### Create Node.js builder instance, and build artifact
 $Builder = Get-NodeBuilder -Version $Version -Platform $Platform -Architecture $Architecture

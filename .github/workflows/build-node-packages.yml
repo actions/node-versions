@@ -1,10 +1,9 @@
-name: Generate Node.js
+name: Generate Node.js package
 on:
-# TODO: currently workflow dispatch endpoint does not work. I will investigate
   workflow_dispatch:
     inputs:
       VERSION:
-        description: 'Node version to build and upload'
+        description: 'Node.js version to build and upload'
         required: true
         default: '14.2.0'
       PUBLISH_RELEASES:
@@ -14,12 +13,13 @@ on:
 
 env:
   VERSION: ${{ github.event.inputs.VERSION }}
-  ARCHITECTURE: x64
 
 jobs:
   build_node:
-    name: Build Node ${{ github.event.inputs.VERSION }} ${{ matrix.platform }}
+    name: Build Node.js ${{ github.event.inputs.VERSION }} [${{ matrix.platform }}]
     runs-on: ubuntu-latest
+    env: 
+      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
@@ -29,59 +29,44 @@ jobs:
       with:
         submodules: true
 
-    - name: Create artifact directories
-      run: |
-        binariesDirectory=$RUNNER_WORKSPACE/binaries
-        echo ::set-env name=BINARIES_DIRECTORY::$binariesDirectory
-        mkdir $binariesDirectory
-
-        artifactDirectory=$RUNNER_WORKSPACE/artifact
-        echo ::set-env name=ARTIFACT_DIRECTORY::$artifactDirectory
-        mkdir $artifactDirectory
-
-    - name: Build Node ${{ env.VERSION }}
+    - name: Build Node.js ${{ env.VERSION }}
+      shell: pwsh
       run: |
         ./builders/build-node.ps1 -Version $env:VERSION `
-                                  -Platform ${{ matrix.platform }} `
-                                  -Architecture $env:ARCHITECTURE
-      shell: pwsh
+                                  -Platform ${{ matrix.platform }}
 
     - name: Publish artifact
       uses: actions/upload-artifact@v2
       with:
-        name: node-${{ env.VERSION }}-${{ matrix.platform }}
-        path: /home/runner/work/node-versions/artifact
+        name: ${{ env.ARTIFACT_NAME }}
+        path: ${{ runner.temp }}/artifact
 
   test_node:
-    name: Test Node ${{ github.event.inputs.VERSION }} ${{ matrix.platform }}
+    name: Test Node.js ${{ github.event.inputs.VERSION }} [${{ matrix.platform }}]
     needs: build_node
-    runs-on: ${{ matrix.os }}-latest
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        shell: pwsh
+    env: 
+      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
         include:
-        - os: ubuntu
+        - os: ubuntu-latest
           platform: linux
-        - os: macos
+        - os: macos-latest
           platform: darwin
-        - os: windows
+        - os: windows-latest
           platform: win32
     steps:
     - uses: actions/checkout@v2
       with:
         submodules: true
 
-    - name: Set AGENT_TOOLSDIRECTORY variable
-      if: matrix.platform == 'win32'
-      run: |
-        # GitHub Windows images don't have `AGENT_TOOLSDIRECTORY` variable
-        echo ::set-env name=AGENT_TOOLSDIRECTORY::$RUNNER_TOOL_CACHE
-      shell: bash
-
     - name: Fully cleanup the toolcache directory before testing
-      run: |
-        ./helpers/clean-toolcache.ps1 -ToolName "node"
-      shell: pwsh
+      run: ./helpers/clean-toolcache.ps1 -ToolName "node"
 
     - name: Download artifact
       uses: actions/download-artifact@v2
@@ -91,22 +76,20 @@ jobs:
     - name: Extract files
       run: |
         if ('${{ matrix.platform }}' -eq 'win32') {
-          $artifactName = "node-${{ env.VERSION }}-${{ matrix.platform }}-${{ env.ARCHITECTURE }}.7z"
+          $artifactName = "${{ env.ARTIFACT_NAME }}.7z"
           7z.exe x "$artifactName" -y | Out-Null 
         } else {
-          $artifactName = "node-${{ env.VERSION }}-${{ matrix.platform }}-${{ env.ARCHITECTURE }}.tar.gz"
+          $artifactName = "${{ env.ARTIFACT_NAME }}.tar.gz"
           tar -xzf $artifactName
         }
-      working-directory: ${{ runner.temp }}/node-${{ env.VERSION }}-${{ matrix.platform }}
-      shell: pwsh
+      working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
 
     - name: Apply build artifact to the local machine
       run: |
         if ('${{ matrix.platform }}' -eq 'win32') { powershell ./setup.ps1 } else { sh ./setup.sh }
-      working-directory: ${{ runner.temp }}/node-${{ env.VERSION }}-${{ matrix.platform }}
-      shell: pwsh
+      working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
 
-    - name: Setup node ${{ env.VERSION }}
+    - name: Setup Node.js ${{ env.VERSION }}
       uses: actions/setup-node@v2.1.1
       with:
         node-version: ${{ env.VERSION }}
@@ -117,7 +100,7 @@ jobs:
         Write-Host "We need it because log of previous step 'Setup Node' is not available here yet."
         Write-Host "In testing step (Node.Tests.ps1) we analyze build log of 'Setup Node' task"
         Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
-      shell: pwsh
+        for ($i = 0; $i -lt 200; $i++) { Get-Random }
 
     - name: Run tests
       run: |
@@ -129,18 +112,17 @@ jobs:
             Version="$env:VERSION";
           }
         }
-        Invoke-Pester -Script $pesterParams -EnableExit -OutputFile "test_results.xml" -OutputFormat NUnitXml
+        Invoke-Pester -Script $pesterParams -EnableExit
       working-directory: ./tests
-      shell: pwsh
 
   publish_release:
     name: Publish release
     if: github.event.inputs.PUBLISH_RELEASES == 'true'
     needs: test_node
     runs-on: ubuntu-latest
-    outputs:
-      upload_url: ${{ steps.create_release.outputs.upload_url }}
     steps:
+    - uses: actions/download-artifact@v2
+
     - name: Publish Release ${{ env.VERSION }}
       id: create_release
       uses: actions/create-release@v1
@@ -150,53 +132,41 @@ jobs:
         tag_name: ${{ env.VERSION }}-${{ github.run_id }}
         release_name: ${{ env.VERSION }}
         body: |
-          Upload Node.js ${{ env.VERSION }}
+          Node.js ${{ env.VERSION }}
 
-  upload_assets:
-    name: Upload assets for ${{ matrix.platform }}
+    - name: Upload release assets
+      uses: actions/github-script@v2
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+
+          for (let artifactDir of fs.readdirSync('.')) {
+            let artifactName = fs.readdirSync(`${artifactDir}`)[0];
+
+            console.log(`Upload ${artifactName} asset`);
+            github.repos.uploadReleaseAsset({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: ${{ steps.create_release.outputs.id }},
+              name: artifactName,
+              data: fs.readFileSync(`./${artifactDir}/${artifactName}`) 
+            });
+          }
+
+  trigger_pr:
+    name: Trigger "Create Pull Request" workflow
     needs: publish_release
     runs-on: ubuntu-latest
-    env:
-      UPLOAD_URL: ${{ needs.publish_release.outputs.upload_url }}
-    strategy:
-      matrix:
-        extension: ['tar.gz']
-        platform: [linux, darwin] 
-        include:
-        - platform: win32
-          extension: 7z
     steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: node-${{ env.VERSION }}-${{ matrix.platform }}
-
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ env.UPLOAD_URL }}
-        asset_path: ./node-${{ env.VERSION }}-${{ matrix.platform }}-${{ env.ARCHITECTURE }}.${{ matrix.extension }}
-        asset_name: node-${{ env.VERSION }}-${{ matrix.platform }}-${{ env.ARCHITECTURE }}.${{ matrix.extension }}
-        asset_content_type: application/zip
-
-  create_pr:
-    name: Create Pull Request
-    needs: upload_assets
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
-
     - name: Trigger "Create Pull Request" workflow
-      uses: actions/github-script@v2
+      uses: actions/github-script@v3
       with:
         github-token: ${{ secrets.PERSONAL_TOKEN }}
         script: |
-          # TODO: currently 'actions.createWorkflowDispatch' function does not work. I will investigate  
-          github.repos.createDispatchEvent({
+          github.actions.createWorkflowDispatch({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            event_type: 'create-pr'
+            workflow_id: 'create-pr.yml',
+            ref: 'main'
           });

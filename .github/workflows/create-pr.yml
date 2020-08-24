@@ -1,14 +1,9 @@
 name: Create Pull Request
-on: 
-# TODO: currently workflow dispatch endpoint does not work. I will investigate
-  repository_dispatch:
-    types: [create-pr]
+on:
   workflow_dispatch:
 jobs:
-  build:
+  create_pr:
     name: Create Pull Request
-    env:
-      REPOSITORY_NAME: 'node-versions'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,18 +13,16 @@ jobs:
     - name: Create versions-manifest.json
       shell: pwsh
       run: |
-        ./helpers/packages-generation/manifest-generator.ps1 -GitHubRepositoryOwner "${{github.repository_owner}}" `
-                                                             -GitHubRepositoryName "$env:REPOSITORY_NAME"`
-                                                             -GitHubAccessToken "${{secrets.GITHUB_TOKEN}}"`
-                                                             -OutputFile "./versions-manifest.json"`
+        ./helpers/packages-generation/manifest-generator.ps1 -RepositoryFullName "$env:GITHUB_REPOSITORY" `
+                                                             -GitHubAccessToken "${{secrets.GITHUB_TOKEN}}" `
+                                                             -OutputFile "./versions-manifest.json" `
                                                              -ConfigurationFile "./config/node-manifest-config.json"
     - name: Create GitHub PR
       shell: pwsh
       run: |
         $formattedDate = Get-Date -Format "MM/dd/yyyy"
         ./helpers/github/create-pull-request.ps1 `
-                            -RepositoryOwner "${{github.repository_owner}}" `
-                            -RepositoryName "$env:REPOSITORY_NAME" `
+                            -RepositoryFullName "$env:GITHUB_REPOSITORY" `
                             -AccessToken "${{secrets.GITHUB_TOKEN}}" `
                             -BranchName "update-versions-manifest-file" `
                             -CommitMessage "Update versions-manifest" `
