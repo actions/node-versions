@@ -13,6 +13,9 @@ on:
 
 env:
   VERSION: ${{ github.event.inputs.VERSION }}
+defaults:
+  run:
+    shell: pwsh
 
 jobs:
   build_node:
@@ -45,9 +48,6 @@ jobs:
     name: Test Node.js ${{ github.event.inputs.VERSION }} [${{ matrix.platform }}]
     needs: build_node
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        shell: pwsh
     env: 
       ARTIFACT_NAME: node-${{ github.event.inputs.VERSION }}-${{ matrix.platform }}-x64
     strategy:
