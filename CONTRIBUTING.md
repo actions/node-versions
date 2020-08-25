@@ -29,21 +29,19 @@ Here are a few things you can do that will increase the likelihood of your pull 
 ### Directory structure
 ```
 
-├── azure-pipelines/
-|   └──templates/
+├── .github/
+|   └──workflows/
 ├── builders/
 ├── helpers/
 ├── installers/
 └── tests/
     └──sources/
 ```
-- `azure-pipelines*` - contains global YAML definitions for build pipelines. Reusable templates for specific jobs are located in `templates` subfolder.
+- `.github/workflows` - contains repository workflow files.
 - `builders` - contains Node.js builder classes and functions.
-- `helpers` - contains global helper functions and functions.
+- `helpers` - contains global helper classes and functions.
 - `installers` - contains installation script templates.
 - `tests` - contains test scripts. Required tests sources are located in `sources` subfolder.
-
-\* _We use Azure Pipelines because there are a few features that Actions is still missing, we'll move to Actions as soon as possible_.
 
 ## Resources
 
