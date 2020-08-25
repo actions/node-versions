@@ -1,6 +1,11 @@
 name: Create Pull Request
 on:
   workflow_dispatch:
+
+defaults:
+  run:
+    shell: pwsh
+
 jobs:
   create_pr:
     name: Create Pull Request
@@ -11,14 +16,12 @@ jobs:
         submodules: true
 
     - name: Create versions-manifest.json
-      shell: pwsh
       run: |
         ./helpers/packages-generation/manifest-generator.ps1 -RepositoryFullName "$env:GITHUB_REPOSITORY" `
                                                              -GitHubAccessToken "${{secrets.GITHUB_TOKEN}}" `
                                                              -OutputFile "./versions-manifest.json" `
                                                              -ConfigurationFile "./config/node-manifest-config.json"
     - name: Create GitHub PR
-      shell: pwsh
       run: |
         $formattedDate = Get-Date -Format "MM/dd/yyyy"
         ./helpers/github/create-pull-request.ps1 `

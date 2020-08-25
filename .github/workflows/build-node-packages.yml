@@ -33,7 +33,6 @@ jobs:
         submodules: true
 
     - name: Build Node.js ${{ env.VERSION }}
-      shell: pwsh
       run: |
         ./builders/build-node.ps1 -Version $env:VERSION `
                                   -Platform ${{ matrix.platform }}
