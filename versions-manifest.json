@@ -425,6 +425,31 @@
     ]
   },
   {
+    "version": "12.19.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/12.19.0-292997882",
+    "files": [
+      {
+        "filename": "node-12.19.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.19.0-292997882/node-12.19.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.19.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.19.0-292997882/node-12.19.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.19.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.19.0-292997882/node-12.19.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "12.18.4",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/12.18.4-257117621",
