@@ -10,19 +10,26 @@ on:
         description: 'Whether to publish releases'
         required: true
         default: 'false'
+  pull_request:
+    paths-ignore:
+    - 'versions-manifest.json'
+    - 'LICENSE'
+    - '**.md'
+    branches:
+    - 'main'
 
 env:
-  VERSION: ${{ github.event.inputs.VERSION }}
+  VERSION: ${{ github.event.inputs.VERSION || '14.0.0' }}
 defaults:
   run:
     shell: pwsh
 
 jobs:
   build_node:
-    name: Build Node.js ${{ github.event.inputs.VERSION }} [${{ matrix.platform }}]
+    name: Build Node.js ${{ github.event.inputs.VERSION || '14.0.0' }} [${{ matrix.platform }}]
     runs-on: ubuntu-latest
     env: 
-      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION }}-${{ matrix.platform }}-x64
+      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION || '14.0.0' }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
@@ -44,11 +51,11 @@ jobs:
         path: ${{ runner.temp }}/artifact
 
   test_node:
-    name: Test Node.js ${{ github.event.inputs.VERSION }} [${{ matrix.platform }}]
+    name: Test Node.js ${{ github.event.inputs.VERSION || '14.0.0' }} [${{ matrix.platform }}]
     needs: build_node
     runs-on: ${{ matrix.os }}
     env: 
-      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION }}-${{ matrix.platform }}-x64
+      ARTIFACT_NAME: node-${{ github.event.inputs.VERSION || '14.0.0' }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
@@ -89,7 +96,7 @@ jobs:
       working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
 
     - name: Setup Node.js ${{ env.VERSION }}
-      uses: actions/setup-node@v2.1.1
+      uses: actions/setup-node@v2.1.2
       with:
         node-version: ${{ env.VERSION }}
 
@@ -110,7 +117,7 @@ jobs:
 
   publish_release:
     name: Publish release
-    if: github.event.inputs.PUBLISH_RELEASES == 'true'
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.PUBLISH_RELEASES == 'true'
     needs: test_node
     runs-on: ubuntu-latest
     steps:
