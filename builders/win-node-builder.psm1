@@ -1,4 +1,4 @@
-using module "./builders/node-builder.psm1"
+using module "./node-builder.psm1"
 
 class WinNodeBuilder : NodeBuilder {
     <#

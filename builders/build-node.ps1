@@ -1,5 +1,5 @@
-using module "./builders/win-node-builder.psm1"
-using module "./builders/nix-node-builder.psm1"
+using module "./win-node-builder.psm1"
+using module "./nix-node-builder.psm1"
 
 <#
 .SYNOPSIS
