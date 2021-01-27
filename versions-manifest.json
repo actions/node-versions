@@ -1500,6 +1500,31 @@
     ]
   },
   {
+    "version": "10.23.2",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/10.23.2-514267332",
+    "files": [
+      {
+        "filename": "node-10.23.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.2-514267332/node-10.23.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.23.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.2-514267332/node-10.23.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.23.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.2-514267332/node-10.23.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "10.23.1",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/10.23.1-465483438",
