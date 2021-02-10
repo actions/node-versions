@@ -1,5 +1,30 @@
 [
   {
+    "version": "14.15.5",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.15.5-553881828",
+    "files": [
+      {
+        "filename": "node-14.15.5-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.15.5-553881828/node-14.15.5-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.15.5-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.15.5-553881828/node-14.15.5-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.15.5-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.15.5-553881828/node-14.15.5-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "14.15.4",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/14.15.4-465482797",
@@ -1496,6 +1521,31 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/12.0.0-20200507.71/node-12.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "10.23.3",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/10.23.3-553882324",
+    "files": [
+      {
+        "filename": "node-10.23.3-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.3-553882324/node-10.23.3-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.23.3-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.3-553882324/node-10.23.3-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.23.3-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.23.3-553882324/node-10.23.3-win32-x64.7z"
       }
     ]
   },
