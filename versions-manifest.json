@@ -625,6 +625,31 @@
     ]
   },
   {
+    "version": "12.20.2",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/12.20.2-557008033",
+    "files": [
+      {
+        "filename": "node-12.20.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.20.2-557008033/node-12.20.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.20.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.20.2-557008033/node-12.20.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.20.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.20.2-557008033/node-12.20.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "12.20.1",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/12.20.1-465483151",
