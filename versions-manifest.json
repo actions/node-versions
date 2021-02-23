@@ -1,5 +1,30 @@
 [
   {
+    "version": "14.16.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.16.0-592967501",
+    "files": [
+      {
+        "filename": "node-14.16.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.16.0-592967501/node-14.16.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.16.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.16.0-592967501/node-14.16.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.16.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.16.0-592967501/node-14.16.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "14.15.5",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/14.15.5-553881828",
@@ -621,6 +646,31 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/13.13.0-20200507.97/node-13.13.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "12.21.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/12.21.0-592968123",
+    "files": [
+      {
+        "filename": "node-12.21.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.21.0-592968123/node-12.21.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.21.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.21.0-592968123/node-12.21.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-12.21.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.21.0-592968123/node-12.21.0-win32-x64.7z"
       }
     ]
   },
@@ -1546,6 +1596,31 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/12.0.0-20200507.71/node-12.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "10.24.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/10.24.0-592968584",
+    "files": [
+      {
+        "filename": "node-10.24.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.24.0-592968584/node-10.24.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.24.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.24.0-592968584/node-10.24.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-10.24.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/10.24.0-592968584/node-10.24.0-win32-x64.7z"
       }
     ]
   },
