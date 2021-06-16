@@ -3,5 +3,6 @@
     "groups": {
         "arch": 2,
         "platform": 1
-    }
+    },
+    "lts_rule_expression": "(Invoke-RestMethod 'https://raw.githubusercontent.com/nodejs/Release/main/schedule.json').PSObject.Properties | Where-Object { $_.Value.codename } | ForEach-Object { @{ Name = $_.Name.TrimStart('v'); Value = $_.Value.codename } }"
 }
