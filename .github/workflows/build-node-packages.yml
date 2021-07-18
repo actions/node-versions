@@ -3,20 +3,20 @@ on:
   workflow_dispatch:
     inputs:
       VERSION:
-        description: 'Node.js version to build and upload'
+        description: "Node.js version to build and upload"
         required: true
-        default: '14.2.0'
+        default: "14.2.0"
       PUBLISH_RELEASES:
-        description: 'Whether to publish releases'
+        description: "Whether to publish releases"
         required: true
-        default: 'false'
+        default: "false"
   pull_request:
     paths-ignore:
-    - 'versions-manifest.json'
-    - 'LICENSE'
-    - '**.md'
+      - "versions-manifest.json"
+      - "LICENSE"
+      - "**.md"
     branches:
-    - 'main'
+      - "main"
 
 env:
   VERSION: ${{ github.event.inputs.VERSION || '14.0.0' }}
@@ -28,92 +28,93 @@ jobs:
   build_node:
     name: Build Node.js ${{ github.event.inputs.VERSION || '14.0.0' }} [${{ matrix.platform }}]
     runs-on: ubuntu-latest
-    env: 
+    env:
       ARTIFACT_NAME: node-${{ github.event.inputs.VERSION || '14.0.0' }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
         platform: [linux, darwin, win32]
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
 
-    - name: Build Node.js ${{ env.VERSION }}
-      run: |
-        ./builders/build-node.ps1 -Version $env:VERSION `
-                                  -Platform ${{ matrix.platform }}
+      - name: Build Node.js ${{ env.VERSION }}
+        run: |
+          ./builders/build-node.ps1 -Version $env:VERSION `
+                                    -Platform ${{ matrix.platform }}
 
-    - name: Publish artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: ${{ env.ARTIFACT_NAME }}
-        path: ${{ runner.temp }}/artifact
+      - name: Publish artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ runner.temp }}/artifact
 
   test_node:
     name: Test Node.js ${{ github.event.inputs.VERSION || '14.0.0' }} [${{ matrix.platform }}]
     needs: build_node
     runs-on: ${{ matrix.os }}
-    env: 
+    env:
       ARTIFACT_NAME: node-${{ github.event.inputs.VERSION || '14.0.0' }}-${{ matrix.platform }}-x64
     strategy:
       fail-fast: false
       matrix:
         include:
-        - os: ubuntu-latest
-          platform: linux
-        - os: macos-latest
-          platform: darwin
-        - os: windows-latest
-          platform: win32
+          - os: ubuntu-latest
+            platform: linux
+          - os: macos-latest
+            platform: darwin
+          - os: windows-latest
+            platform: win32
     steps:
-    - uses: actions/checkout@v2
-      with:
-        submodules: true
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
 
-    - name: Fully cleanup the toolcache directory before testing
-      run: ./helpers/clean-toolcache.ps1 -ToolName "node"
+      - name: Fully cleanup the toolcache directory before testing
+        run: ./helpers/clean-toolcache.ps1 -ToolName "node"
 
-    - name: Download artifact
-      uses: actions/download-artifact@v2
-      with:
-        path: ${{ runner.temp }}
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          path: ${{ runner.temp }}
 
-    - name: Extract files
-      run: |
-        if ('${{ matrix.platform }}' -eq 'win32') {
-          $artifactName = "${{ env.ARTIFACT_NAME }}.7z"
-          7z.exe x "$artifactName" -y | Out-Null 
-        } else {
-          $artifactName = "${{ env.ARTIFACT_NAME }}.tar.gz"
-          tar -xzf $artifactName
-        }
-      working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
+      - name: Extract files
+        run: |
+          if ('${{ matrix.platform }}' -eq 'win32') {
+            $artifactName = "${{ env.ARTIFACT_NAME }}.7z"
+            7z.exe x "$artifactName" -y | Out-Null 
+          } else {
+            $artifactName = "${{ env.ARTIFACT_NAME }}.tar.gz"
+            tar -xzf $artifactName
+          }
+        working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
 
-    - name: Apply build artifact to the local machine
-      run: |
-        if ('${{ matrix.platform }}' -eq 'win32') { powershell ./setup.ps1 } else { sh ./setup.sh }
-      working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
+      - name: Apply build artifact to the local machine
+        run: |
+          if ('${{ matrix.platform }}' -eq 'win32') { powershell ./setup.ps1 } else { sh ./setup.sh }
+        working-directory: ${{ runner.temp }}/${{ env.ARTIFACT_NAME }}
 
-    - name: Setup Node.js ${{ env.VERSION }}
-      uses: actions/setup-node@v2.1.2
-      with:
-        node-version: ${{ env.VERSION }}
+      - name: Setup Node.js ${{ env.VERSION }}
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ env.VERSION }}
+          cache: npm
 
-    - name: Wait for the logs
-      run: |
-        Write-Host "Fake step that do nothing"
-        Write-Host "We need it because log of previous step 'Setup Node' is not available here yet."
-        Write-Host "In testing step (Node.Tests.ps1) we analyze build log of 'Setup Node' task"
-        Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
-        for ($i = 0; $i -lt 200; $i++) { Get-Random }
+      - name: Wait for the logs
+        run: |
+          Write-Host "Fake step that do nothing"
+          Write-Host "We need it because log of previous step 'Setup Node' is not available here yet."
+          Write-Host "In testing step (Node.Tests.ps1) we analyze build log of 'Setup Node' task"
+          Write-Host "to determine if Node.js version was consumed from cache and was downloaded"
+          for ($i = 0; $i -lt 200; $i++) { Get-Random }
 
-    - name: Run tests
-      run: |
-        Install-Module Pester -Force -Scope CurrentUser
-        Import-Module Pester
-        Invoke-Pester -Script ./Node.Tests.ps1 -EnableExit
-      working-directory: ./tests
+      - name: Run tests
+        run: |
+          Install-Module Pester -Force -Scope CurrentUser
+          Import-Module Pester
+          Invoke-Pester -Script ./Node.Tests.ps1 -EnableExit
+        working-directory: ./tests
 
   publish_release:
     name: Publish release
@@ -121,52 +122,52 @@ jobs:
     needs: test_node
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2
 
-    - name: Publish Release ${{ env.VERSION }}
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ env.VERSION }}-${{ github.run_id }}
-        release_name: ${{ env.VERSION }}
-        body: |
-          Node.js ${{ env.VERSION }}
+      - name: Publish Release ${{ env.VERSION }}
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.VERSION }}-${{ github.run_id }}
+          release_name: ${{ env.VERSION }}
+          body: |
+            Node.js ${{ env.VERSION }}
 
-    - name: Upload release assets
-      uses: actions/github-script@v2
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const fs = require('fs');
+      - name: Upload release assets
+        uses: actions/github-script@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
 
-          for (let artifactDir of fs.readdirSync('.')) {
-            let artifactName = fs.readdirSync(`${artifactDir}`)[0];
+            for (let artifactDir of fs.readdirSync('.')) {
+              let artifactName = fs.readdirSync(`${artifactDir}`)[0];
 
-            console.log(`Upload ${artifactName} asset`);
-            github.repos.uploadReleaseAsset({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: ${{ steps.create_release.outputs.id }},
-              name: artifactName,
-              data: fs.readFileSync(`./${artifactDir}/${artifactName}`) 
-            });
-          }
+              console.log(`Upload ${artifactName} asset`);
+              github.repos.uploadReleaseAsset({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                release_id: ${{ steps.create_release.outputs.id }},
+                name: artifactName,
+                data: fs.readFileSync(`./${artifactDir}/${artifactName}`) 
+              });
+            }
 
   trigger_pr:
     name: Trigger "Create Pull Request" workflow
     needs: publish_release
     runs-on: ubuntu-latest
     steps:
-    - name: Trigger "Create Pull Request" workflow
-      uses: actions/github-script@v3
-      with:
-        github-token: ${{ secrets.PERSONAL_TOKEN }}
-        script: |
-          github.actions.createWorkflowDispatch({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            workflow_id: 'create-pr.yml',
-            ref: 'main'
-          });
+      - name: Trigger "Create Pull Request" workflow
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.PERSONAL_TOKEN }}
+          script: |
+            github.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'create-pr.yml',
+              ref: 'main'
+            });
