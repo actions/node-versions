@@ -520,6 +520,32 @@
     ]
   },
   {
+    "version": "14.18.2",
+    "stable": true,
+    "lts": "Fermium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.18.2-1525067507",
+    "files": [
+      {
+        "filename": "node-14.18.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.18.2-1525067507/node-14.18.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.18.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.18.2-1525067507/node-14.18.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.18.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.18.2-1525067507/node-14.18.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "14.18.1",
     "stable": true,
     "lts": "Fermium",
