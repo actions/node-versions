@@ -3,25 +3,25 @@
     "version": "16.14.2",
     "stable": true,
     "lts": "Gallium",
-    "release_url": "https://github.com/actions/node-versions/releases/tag/16.14.2-2004853623",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/16.14.2-2007501289",
     "files": [
       {
         "filename": "node-16.14.2-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2004853623/node-16.14.2-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2007501289/node-16.14.2-darwin-x64.tar.gz"
       },
       {
         "filename": "node-16.14.2-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2004853623/node-16.14.2-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2007501289/node-16.14.2-linux-x64.tar.gz"
       },
       {
         "filename": "node-16.14.2-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2004853623/node-16.14.2-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.2-2007501289/node-16.14.2-win32-x64.7z"
       }
     ]
   },
@@ -29,25 +29,25 @@
     "version": "16.14.1",
     "stable": true,
     "lts": "Gallium",
-    "release_url": "https://github.com/actions/node-versions/releases/tag/16.14.1-2004854622",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/16.14.1-2007501671",
     "files": [
       {
         "filename": "node-16.14.1-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2004854622/node-16.14.1-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2007501671/node-16.14.1-darwin-x64.tar.gz"
       },
       {
         "filename": "node-16.14.1-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2004854622/node-16.14.1-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2007501671/node-16.14.1-linux-x64.tar.gz"
       },
       {
         "filename": "node-16.14.1-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2004854622/node-16.14.1-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.14.1-2007501671/node-16.14.1-win32-x64.7z"
       }
     ]
   },
@@ -653,25 +653,25 @@
     "version": "14.19.1",
     "stable": true,
     "lts": "Fermium",
-    "release_url": "https://github.com/actions/node-versions/releases/tag/14.19.1-2004856079",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.19.1-2007502144",
     "files": [
       {
         "filename": "node-14.19.1-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2004856079/node-14.19.1-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2007502144/node-14.19.1-darwin-x64.tar.gz"
       },
       {
         "filename": "node-14.19.1-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2004856079/node-14.19.1-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2007502144/node-14.19.1-linux-x64.tar.gz"
       },
       {
         "filename": "node-14.19.1-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2004856079/node-14.19.1-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.19.1-2007502144/node-14.19.1-win32-x64.7z"
       }
     ]
   },
@@ -1691,25 +1691,25 @@
     "version": "12.22.11",
     "stable": true,
     "lts": "Erbium",
-    "release_url": "https://github.com/actions/node-versions/releases/tag/12.22.11-2004856802",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/12.22.11-2007502541",
     "files": [
       {
         "filename": "node-12.22.11-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2004856802/node-12.22.11-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2007502541/node-12.22.11-darwin-x64.tar.gz"
       },
       {
         "filename": "node-12.22.11-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2004856802/node-12.22.11-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2007502541/node-12.22.11-linux-x64.tar.gz"
       },
       {
         "filename": "node-12.22.11-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2004856802/node-12.22.11-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/12.22.11-2007502541/node-12.22.11-win32-x64.7z"
       }
     ]
   },
