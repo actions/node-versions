@@ -1,5 +1,30 @@
 [
   {
+    "version": "18.6.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.6.0-2668405805",
+    "files": [
+      {
+        "filename": "node-18.6.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.6.0-2668405805/node-18.6.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.6.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.6.0-2668405805/node-18.6.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.6.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.6.0-2668405805/node-18.6.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "18.5.0",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.5.0-2633806751",
