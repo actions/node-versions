@@ -1,7 +1,60 @@
 [
   {
+    "version": "18.12.0",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.12.0-3326707086",
+    "files": [
+      {
+        "filename": "node-18.12.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.12.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.12.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.11.0",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.11.0-3326708113",
+    "files": [
+      {
+        "filename": "node-18.11.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.11.0-3326708113/node-18.11.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.11.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.11.0-3326708113/node-18.11.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.11.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.11.0-3326708113/node-18.11.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "18.10.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.10.0-3148976688",
     "files": [
       {
@@ -27,6 +80,7 @@
   {
     "version": "18.9.1",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.9.1-3117359014",
     "files": [
       {
@@ -52,6 +106,7 @@
   {
     "version": "18.9.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.9.0-3016147249",
     "files": [
       {
@@ -77,6 +132,7 @@
   {
     "version": "18.8.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.8.0-2924196251",
     "files": [
       {
@@ -102,6 +158,7 @@
   {
     "version": "18.7.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.7.0-2744549059",
     "files": [
       {
@@ -127,6 +184,7 @@
   {
     "version": "18.6.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.6.0-2668405805",
     "files": [
       {
@@ -152,6 +210,7 @@
   {
     "version": "18.5.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.5.0-2633806751",
     "files": [
       {
@@ -177,6 +236,7 @@
   {
     "version": "18.4.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.4.0-2509927094",
     "files": [
       {
@@ -202,6 +262,7 @@
   {
     "version": "18.3.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.3.0-2426429734",
     "files": [
       {
@@ -227,6 +288,7 @@
   {
     "version": "18.2.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.2.0-2343541082",
     "files": [
       {
@@ -252,6 +314,7 @@
   {
     "version": "18.1.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.1.0-2264683089",
     "files": [
       {
@@ -277,6 +340,7 @@
   {
     "version": "18.0.0",
     "stable": true,
+    "lts": "Hydrogen",
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.0.0-2193993879",
     "files": [
       {
@@ -296,6 +360,32 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/18.0.0-2193993879/node-18.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "16.18.0",
+    "stable": true,
+    "lts": "Gallium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/16.18.0-3326708806",
+    "files": [
+      {
+        "filename": "node-16.18.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.0-3326708806/node-16.18.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-16.18.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.0-3326708806/node-16.18.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-16.18.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.0-3326708806/node-16.18.0-win32-x64.7z"
       }
     ]
   },
