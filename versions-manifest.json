@@ -1,27 +1,53 @@
 [
   {
+    "version": "18.12.1",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.12.1-3486235546",
+    "files": [
+      {
+        "filename": "node-18.12.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.1-3486235546/node-18.12.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.12.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.1-3486235546/node-18.12.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.12.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.1-3486235546/node-18.12.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "18.12.0",
     "stable": true,
     "lts": "Hydrogen",
-    "release_url": "https://github.com/actions/node-versions/releases/tag/18.12.0-3326707086",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.12.0-3336799598",
     "files": [
       {
         "filename": "node-18.12.0-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3336799598/node-18.12.0-darwin-x64.tar.gz"
       },
       {
         "filename": "node-18.12.0-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3336799598/node-18.12.0-linux-x64.tar.gz"
       },
       {
         "filename": "node-18.12.0-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3326707086/node-18.12.0-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.12.0-3336799598/node-18.12.0-win32-x64.7z"
       }
     ]
   },
@@ -360,6 +386,32 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/18.0.0-2193993879/node-18.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "16.18.1",
+    "stable": true,
+    "lts": "Gallium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/16.18.1-3486236598",
+    "files": [
+      {
+        "filename": "node-16.18.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.1-3486236598/node-16.18.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-16.18.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.1-3486236598/node-16.18.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-16.18.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.18.1-3486236598/node-16.18.1-win32-x64.7z"
       }
     ]
   },
@@ -1166,6 +1218,58 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/16.0.0-769713005/node-16.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "14.21.1",
+    "stable": true,
+    "lts": "Fermium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.21.1-3486237792",
+    "files": [
+      {
+        "filename": "node-14.21.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.1-3486237792/node-14.21.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.21.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.1-3486237792/node-14.21.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.21.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.1-3486237792/node-14.21.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "14.21.0",
+    "stable": true,
+    "lts": "Fermium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/14.21.0-3486239091",
+    "files": [
+      {
+        "filename": "node-14.21.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.0-3486239091/node-14.21.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.21.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.0-3486239091/node-14.21.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-14.21.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/14.21.0-3486239091/node-14.21.0-win32-x64.7z"
       }
     ]
   },
