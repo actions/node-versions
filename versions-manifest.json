@@ -2,25 +2,25 @@
   {
     "version": "20.1.0",
     "stable": true,
-    "release_url": "https://github.com/actions/node-versions/releases/tag/20.1.0-4879485699",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.1.0-4890533026",
     "files": [
       {
         "filename": "node-20.1.0-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4879485699/node-20.1.0-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4890533026/node-20.1.0-darwin-x64.tar.gz"
       },
       {
         "filename": "node-20.1.0-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4879485699/node-20.1.0-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4890533026/node-20.1.0-linux-x64.tar.gz"
       },
       {
         "filename": "node-20.1.0-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4879485699/node-20.1.0-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.1.0-4890533026/node-20.1.0-win32-x64.7z"
       }
     ]
   },
