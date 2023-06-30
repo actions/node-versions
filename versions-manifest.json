@@ -131,6 +131,12 @@
     "release_url": "https://github.com/actions/node-versions/releases/tag/18.16.1-5342957492",
     "files": [
       {
+        "filename": "node-18.16.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.16.1-5342957492/node-18.16.1-darwin-arm64.tar.gz"
+      },
+      {
         "filename": "node-18.16.1-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
@@ -702,6 +708,12 @@
     "lts": "Gallium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/16.20.1-5342959204",
     "files": [
+      {
+        "filename": "node-16.20.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/16.20.1-5342959204/node-16.20.1-darwin-arm64.tar.gz"
+      },
       {
         "filename": "node-16.20.1-darwin-x64.tar.gz",
         "arch": "x64",
