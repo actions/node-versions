@@ -1,5 +1,5 @@
 {
-    "regex": "node-\\d+\\.\\d+\\.\\d+-(\\w+)-(x\\d+)",
+    "regex": "node-\\d+\\.\\d+\\.\\d+-(\\w+)-((x|arm)\\d+)",
     "groups": {
         "arch": 2,
         "platform": 1
