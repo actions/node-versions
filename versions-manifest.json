@@ -1,5 +1,30 @@
 [
   {
+    "version": "20.4.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.4.0-5484146983",
+    "files": [
+      {
+        "filename": "node-20.4.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.4.0-5484146983/node-20.4.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.4.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.4.0-5484146983/node-20.4.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.4.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.4.0-5484146983/node-20.4.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "20.3.1",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.3.1-5342956167",
