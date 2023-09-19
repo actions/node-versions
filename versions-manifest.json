@@ -1,5 +1,30 @@
 [
   {
+    "version": "20.7.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.7.0-6231175880",
+    "files": [
+      {
+        "filename": "node-20.7.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.7.0-6231175880/node-20.7.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.7.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.7.0-6231175880/node-20.7.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.7.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.7.0-6231175880/node-20.7.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "20.6.1",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.6.1-6142062498",
@@ -246,6 +271,32 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/20.0.0-4805425216/node-20.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.18.0",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.18.0-6231178035",
+    "files": [
+      {
+        "filename": "node-18.18.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.18.0-6231178035/node-18.18.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.18.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.18.0-6231178035/node-18.18.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.18.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.18.0-6231178035/node-18.18.0-win32-x64.7z"
       }
     ]
   },
