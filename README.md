@@ -11,5 +11,8 @@ Latest of LTS versions will be installed on the [runner-images](https://github.c
 ## Adding new versions
 We are trying to prepare packages for new versions of Node.js as soon as they are released. Please open an issue in [actions/runner-images](https://github.com/actions/runner-images) if any versions are missing.
 
+## Support Notification Policy
+Beginning **approximately six months prior** to the removal of a Node.js version from the [versions-manifest.json](https://github.com/actions/node-versions/blob/main/versions-manifest.json) file, a pinned issue will be created in the [setup-node](https://github.com/actions/setup-node) repository. This pinned issue will provide important details about the upcoming end of support, including the specific date, as well as any other notes, relevant updates or alternatives. We encourage users to regularly check pinned issues for updates on tool versions they are using for maximum transparency, security, performance and overall compatibility with their projects.
+
 ## Contribution
 Contributions are welcome! See [Contributor's Guide](./CONTRIBUTING.md) for more details about contribution process and code structure
