@@ -1,7 +1,34 @@
 [
   {
+    "version": "20.9.0",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.9.0-6635846781",
+    "files": [
+      {
+        "filename": "node-20.9.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.9.0-6635846781/node-20.9.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.9.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.9.0-6635846781/node-20.9.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.9.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.9.0-6635846781/node-20.9.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "20.8.1",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.8.1-6529388730",
     "files": [
       {
@@ -27,6 +54,7 @@
   {
     "version": "20.8.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.8.0-6353460105",
     "files": [
       {
@@ -52,6 +80,7 @@
   {
     "version": "20.7.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.7.0-6231175880",
     "files": [
       {
@@ -77,6 +106,7 @@
   {
     "version": "20.6.1",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.6.1-6142062498",
     "files": [
       {
@@ -102,6 +132,7 @@
   {
     "version": "20.6.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.6.0-6092715008",
     "files": [
       {
@@ -127,6 +158,7 @@
   {
     "version": "20.5.1",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.5.1-5819736097",
     "files": [
       {
@@ -152,6 +184,7 @@
   {
     "version": "20.5.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.5.0-5619267642",
     "files": [
       {
@@ -177,6 +210,7 @@
   {
     "version": "20.4.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.4.0-5484146983",
     "files": [
       {
@@ -202,6 +236,7 @@
   {
     "version": "20.3.1",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.3.1-5342956167",
     "files": [
       {
@@ -227,6 +262,7 @@
   {
     "version": "20.3.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.3.0-5218671512",
     "files": [
       {
@@ -252,6 +288,7 @@
   {
     "version": "20.2.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.2.0-4994802831",
     "files": [
       {
@@ -277,6 +314,7 @@
   {
     "version": "20.1.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.1.0-4890533026",
     "files": [
       {
@@ -302,6 +340,7 @@
   {
     "version": "20.0.0",
     "stable": true,
+    "lts": "Iron",
     "release_url": "https://github.com/actions/node-versions/releases/tag/20.0.0-4805425216",
     "files": [
       {
