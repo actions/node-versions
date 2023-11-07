@@ -54,7 +54,7 @@ class NixNodeBuilder : NodeBuilder {
         $installationTemplateLocation = Join-Path -Path $this.InstallationTemplatesLocation -ChildPath $this.InstallationTemplateName
 
         $installationTemplateContent = Get-Content -Path $installationTemplateLocation -Raw
-        $installationTemplateContent = $installationTemplateContent -f $this.Version.ToString(3)
+        $installationTemplateContent = $installationTemplateContent -f $this.Version.ToString(3), $this.Architecture
         $installationTemplateContent | Out-File -FilePath $installationScriptLocation
 
         Write-Debug "Done; Installation script location: $installationScriptLocation)"
