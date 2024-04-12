@@ -1,5 +1,49 @@
 [
   {
+    "version": "20.12.2",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.12.2-8647736879",
+    "files": [
+      {
+        "filename": "node-20.12.2-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.12.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.12.2-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.12.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.12.2-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.12.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.12.2-8647736879/node-20.12.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "20.12.1",
     "stable": true,
     "lts": "Iron",
@@ -550,6 +594,44 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/20.0.0-4805425216/node-20.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.20.2",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.20.2-8647739097",
+    "files": [
+      {
+        "filename": "node-18.20.2-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.2-8647739097/node-18.20.2-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.2-8647739097/node-18.20.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.2-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.2-8647739097/node-18.20.2-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.2-8647739097/node-18.20.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.2-8647739097/node-18.20.2-win32-x64.7z"
       }
     ]
   },
