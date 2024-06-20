@@ -87,8 +87,12 @@ class NodeBuilder {
         #>
 
         Write-Host "Create WorkFolderLocation and ArtifactFolderLocation folders"
-        New-Item -Path $this.WorkFolderLocation -ItemType "directory"
+      if (-not (Test-Path -path $this.WorkFolderLocation)) {
+          New-Item -Path $this.WorkFolderLocation -ItemType "directory"
+        }
+     if (-not (Test-Path -path $this.ArtifactFolderLocation)) {
         New-Item -Path $this.ArtifactFolderLocation -ItemType "directory"
+      }
 
         Write-Host "Download Node.js $($this.Version) [$($this.Architecture)] executable..."
         $binariesArchivePath = $this.Download()
