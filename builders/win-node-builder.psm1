@@ -30,22 +30,41 @@ class WinNodeBuilder : NodeBuilder {
         $this.OutputArtifactName = "node-$Version-$Platform-$Architecture.7z"
     }
 
-    [uri] GetBinariesUri() {
-        <#
-        .SYNOPSIS
-        Get base Node.js URI and return complete URI for Node.js installation executable.
-        #>
 
-        $base = $this.GetBaseUri()
-        return "${base}/v$($this.Version)/node-v$($this.Version)-win-$($this.Architecture).7z"
+
+
+   [uri] GetBinariesUri() {
+    <#
+    .SYNOPSIS
+    Get base Node.js URI and return complete URI for Node.js installation executable.
+    #>
+
+    $base = $this.GetBaseUri()
+    $uri = "${base}/v$($this.Version)/node-v$($this.Version)-win-$($this.Architecture).7z"
+
+    # Check if the package exists
+    try {
+        $response = Invoke-WebRequest -Uri $uri -Method Head -ErrorAction Stop
+
+        # If the request was successful and the status code is 200, return the URI
+        if ($response.StatusCode -eq 200) {
+            return $uri
+        } else {
+            Write-Host "Skipping build as the binary does not exist."
+            return $null
+        }
+    } catch {
+        Write-Host "Skipping build as the binary does not exist."
+        return $null
     }
-
+}
+   
     [void] ExtractBinaries($archivePath) {
         $extractTargetDirectory = Join-Path $this.TempFolderLocation "tempExtract"
         Extract-SevenZipArchive -ArchivePath $archivePath -OutputDirectory $extractTargetDirectory
         $nodeOutputPath = Get-Item $extractTargetDirectory\* | Select-Object -First 1 -ExpandProperty Fullname
-        Move-Item -Path $nodeOutputPath\* -Destination $this.WorkFolderLocation
-    }
+        Move-Item -Path $nodeOutputPath\* -Destination $this.WorkFolderLocation -Force
+      }
 
     [void] CreateInstallationScript() {
         <#
@@ -53,7 +72,7 @@ class WinNodeBuilder : NodeBuilder {
         Create Node.js artifact installation script based on specified template.
         #>
 
-        $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File
+        $installationScriptLocation = $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File -Force
         $installationTemplateLocation = Join-Path -Path $this.InstallationTemplatesLocation -ChildPath $this.InstallationTemplateName
         $installationTemplateContent = Get-Content -Path $installationTemplateLocation -Raw
 
