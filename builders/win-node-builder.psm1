@@ -72,7 +72,7 @@ class WinNodeBuilder : NodeBuilder {
         Create Node.js artifact installation script based on specified template.
         #>
 
-        $installationScriptLocation = $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File -Force
+        $installationScriptLocation = New-Item -Path $this.WorkFolderLocation -Name $this.InstallationScriptName -ItemType File -Force
         $installationTemplateLocation = Join-Path -Path $this.InstallationTemplatesLocation -ChildPath $this.InstallationTemplateName
         $installationTemplateContent = Get-Content -Path $installationTemplateLocation -Raw
 
