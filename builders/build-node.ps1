@@ -56,6 +56,19 @@ function Get-NodeBuilder {
     $Platform = $Platform.ToLower()  
     if ($Platform -match 'win32') {
         $builder = [WinNodeBuilder]::New($Version, $Platform, $Architecture)
+        # Get the URL of the binaries
+        $binariesUri = $builder.GetBinariesUri()
+
+      # If the URL is $null, then skip the download and build process
+     if ($binariesUri -eq $null) {
+        Write-Host "The binary doesn't exist. Skipping download and build."
+        exit 0
+      } else {
+       # Continue with the build
+        $builder.Build()
+        return $builder
+     }
+        
     } elseif (($Platform -match 'linux') -or ($Platform -match 'darwin')) {
         $builder = [NixNodeBuilder]::New($Version, $Platform, $Architecture)
     } else {
