@@ -23,7 +23,7 @@ on:
 jobs:
   node:
     name: Node
-    uses: gowridurgad/versions-package-tools/.github/workflows/build-tool-packages.yml@versions_changes
+    uses: actions/versions-package-tools/.github/workflows/build-tool-packages.yml@trstingarm64
     with:
       tool-name: "node"
       tool-version: ${{ inputs.VERSION || '18.12.0' }}
