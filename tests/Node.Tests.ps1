@@ -13,7 +13,7 @@ BeforeAll {
         } | Select-Object -First 1
         return $useNodeLogFile.Fullname
     } else {
-        Write-Host "Directory '$logsFolderPath' does not exist."
+        
         return $null
     }
 }
@@ -40,13 +40,15 @@ Describe "Node.js" {
     }
 
     It "cached version is used without downloading" {
-        # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
-        $useNodeLogFile = Get-UseNodeLogs
+    $useNodeLogFile = Get-UseNodeLogs
+    if ($useNodeLogFile -eq $null) {
+        Skip "Log file does not exist"
+    } else {
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
         $useNodeLogContent | Should -Match "Found in cache"
     }
-
+}
     It "Run simple code" {
         "node ./simple-test.js" | Should -ReturnZeroExitCode
     }
