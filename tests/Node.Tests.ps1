@@ -41,7 +41,7 @@ Describe "Node.js" {
     It "cached version is used without downloading" {
     $useNodeLogFile = Get-UseNodeLogs
     if ($useNodeLogFile -eq $null) {
-        Skip "Log file does not exist"
+        Set-ItResult -Skipped -Because "Log file does not exist"
     } else {
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
