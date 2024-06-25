@@ -2,21 +2,22 @@ Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 BeforeAll {
     function Get-UseNodeLogs {
-    # GitHub Windows images don't have `HOME` variable
-    $homeDir = $env:HOME ?? $env:HOMEDRIVE
-    $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        if ($env:SELF_HOSTED_RUNNER -eq 'true') {
+            # Set the correct path for your self-hosted runner
+            $logsFolderPath = "C:\Users\runneradmin\runners\_diag\pages"
+        } else {
+            # GitHub Windows images don't have `HOME` variable
+            $homeDir = $env:HOME ?? $env:HOMEDRIVE
+            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        }
 
-    if (Test-Path -Path $logsFolderPath) {
         $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
         } | Select-Object -First 1
+
         return $useNodeLogFile.Fullname
-    } else {
-        
-        return $null
     }
-}
 }
 
 Describe "Node.js" {
