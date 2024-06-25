@@ -3,14 +3,18 @@ Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 BeforeAll {
     function Get-UseNodeLogs {
-        # GitHub Windows images don't have `HOME` variable
-        $homeDir = $env:HOME ?? $env:HOMEDRIVE
-        $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        # Set the logs folder path based on whether the runner is self-hosted or GitHub-hosted
+        $logsFolderPath = $env:SELF_HOSTED_RUNNER -eq 'true' ? "/Users/runneradmin/runners/_diag" : "/home/runner/runners/_diag"
+
+        if (-not (Test-Path -Path $logsFolderPath)) {
+            throw "Directory '$logsFolderPath' does not exist."
+        }
 
         $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
         } | Select-Object -First 1
+
         return $useNodeLogFile.Fullname
     }
 }
