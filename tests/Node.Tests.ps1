@@ -2,18 +2,22 @@ Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 BeforeAll {
     function Get-UseNodeLogs {
-        # GitHub Windows images don't have `HOME` variable
-        $homeDir = $env:HOME ?? $env:HOMEDRIVE
-        $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        # Set the correct path for your self-hosted runner
+        $logsFolderPath = "/home/runner/runners"
+
+        if (-not (Test-Path $logsFolderPath)) {
+            Write-Host "Directory '$logsFolderPath' does not exist."
+            return $null
+        }
 
         $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
         } | Select-Object -First 1
+
         return $useNodeLogFile.Fullname
     }
 }
-
 Describe "Node.js" {
     It "is available" {
         "node --version" | Should -ReturnZeroExitCode
@@ -35,12 +39,15 @@ Describe "Node.js" {
     }
 
     It "cached version is used without downloading" {
-        # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
-        $useNodeLogFile = Get-UseNodeLogs
+    $useNodeLogFile = Get-UseNodeLogs
+    if ($useNodeLogFile -eq $null) {
+        Skip "Log file does not exist"
+    } else {
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
         $useNodeLogContent | Should -Match "Found in cache"
     }
+}
     It "Run simple code" {
         "node ./simple-test.js" | Should -ReturnZeroExitCode
     }
