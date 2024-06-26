@@ -39,19 +39,21 @@ Describe "Node.js" {
     Write-Host "OS: $($env:OS)"
     }
 
-    It "cached version is used without downloading" {
-        # Check the architecture and OS before running the test
-        if (($env:PROCESSOR_ARCHITECTURE -ne 'ARM64') -or (($env:OS -ne 'Windows_NT') -and ($env:OS -ne 'Linux'))) {
-            # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
-            $useNodeLogFile = Get-UseNodeLogs
-            $useNodeLogFile | Should -Exist
-            $useNodeLogContent = Get-Content $useNodeLogFile -Raw
-            $useNodeLogContent | Should -Match "Found in cache"
-        } else {
-            # Skip the test for arm64 on Windows and Linux
-            Set-ItResult -Skipped -Because "Skipping this test for arm64 on Windows and Linux"
-        }
+   It "cached version is used without downloading" {
+    # Set a custom variable to check for architecture and OS
+    $isArm64WindowsOrLinux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux' -or $IsWindows)) {$true} else {$false}
+
+    if (!$isArm64WindowsOrLinux) {
+        # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
+        $useNodeLogFile = Get-UseNodeLogs
+        $useNodeLogFile | Should -Exist
+        $useNodeLogContent = Get-Content $useNodeLogFile -Raw
+        $useNodeLogContent | Should -Match "Found in cache"
+    } else {
+        # Skip the test for arm64 on Windows and Linux
+        Set-ItResult -Skipped -Because "Skipping this test for arm64 on Windows and Linux"
     }
+}
 
 
     It "Run simple code" {
