@@ -34,6 +34,11 @@ Describe "Node.js" {
         $nodePath.startsWith($expectedPath) | Should -BeTrue -Because "'$nodePath' is not started with '$expectedPath'"
     }
 
+    BeforeAll {
+    Write-Host "Architecture: $($env:PROCESSOR_ARCHITECTURE)"
+    Write-Host "OS: $($env:OS)"
+    }
+
     It "cached version is used without downloading" {
         # Check the architecture and OS before running the test
         if (($env:PROCESSOR_ARCHITECTURE -ne 'ARM64') -or (($env:OS -ne 'Windows_NT') -and ($env:OS -ne 'Linux'))) {
