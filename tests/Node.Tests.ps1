@@ -39,11 +39,12 @@ Describe "Node.js" {
     Write-Host "OS: $($env:OS)"
     }
 
-   It "cached version is used without downloading" {
+  It "cached version is used without downloading" {
     # Set a custom variable to check for architecture and OS
-    $isArm64WindowsOrLinux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux' -or $IsWindows)) {$true} else {$false}
+    $isArm64Windows = if ($IsWindows -and ([System.Environment]::Is64BitOperatingSystem)) {$true} else {$false}
+    $isArm64Linux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux')) {$true} else {$false}
 
-    if (!$isArm64WindowsOrLinux) {
+    if (!$isArm64Windows -and !$isArm64Linux) {
         # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
         $useNodeLogFile = Get-UseNodeLogs
         $useNodeLogFile | Should -Exist
@@ -54,7 +55,6 @@ Describe "Node.js" {
         Set-ItResult -Skipped -Because "Skipping this test for arm64 on Windows and Linux"
     }
 }
-
 
     It "Run simple code" {
         "node ./simple-test.js" | Should -ReturnZeroExitCode
