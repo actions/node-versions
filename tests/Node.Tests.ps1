@@ -35,15 +35,19 @@ Describe "Node.js" {
     }
 
     It "cached version is used without downloading" {
-        # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
-        $useNodeLogFile = Get-UseNodeLogs
-        if ($useNodeLogFile -eq $null) {
-        Set-ItResult -Skipped -Because "Log file does not exist"
-    } else {
-        $useNodeLogFile | Should -Exist
-        $useNodeLogContent = Get-Content $useNodeLogFile -Raw
+        # Check the architecture and OS before running the test
+        if (($env:PROCESSOR_ARCHITECTURE -ne 'ARM64') -or (($env:OS -ne 'Windows_NT') -and ($env:OS -ne 'Linux'))) {
+            # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
+            $useNodeLogFile = Get-UseNodeLogs
+            $useNodeLogFile | Should -Exist
+            $useNodeLogContent = Get-Content $useNodeLogFile -Raw
+            $useNodeLogContent | Should -Match "Found in cache"
+        } else {
+            # Skip the test for arm64 on Windows and Linux
+            Set-ItResult -Skipped -Because "Skipping this test for arm64 on Windows and Linux"
+        }
     }
-    }
+
 
     It "Run simple code" {
         "node ./simple-test.js" | Should -ReturnZeroExitCode
