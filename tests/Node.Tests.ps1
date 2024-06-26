@@ -2,14 +2,28 @@ Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 BeforeAll {
     function Get-UseNodeLogs {
-        # GitHub Windows images don't have `HOME` variable
-        $homeDir = $env:HOME ?? $env:HOMEDRIVE
-        $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        # Determine if the current environment is Windows or Linux
+        $isWindows = $PSVersionTable.PSVersion.Platform -eq "Win32NT"
+        $isArm64 = $env:PROCESSOR_ARCHITECTURE -eq "ARM64"
+
+        # For Windows, use HOMEDRIVE if HOME is not available
+        # For Linux, use HOME directly
+        $homeDir = if ($isWindows) { $env:HOME ?? $env:HOMEDRIVE } else { $env:HOME }
+
+        # Check if the OS is Windows ARM64 or Linux ARM64 and set the logs folder path accordingly
+        if ($isWindows -and $isArm64) {
+            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/_diag/pages" -Resolve
+        } elseif (-not $isWindows -and $isArm64) {
+            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/_diag/pages" -Resolve
+        } else {
+            throw "Unsupported OS or architecture."
+        }
 
         $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
         } | Select-Object -First 1
+
         return $useNodeLogFile.Fullname
     }
 }
