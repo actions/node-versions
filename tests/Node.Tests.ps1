@@ -34,17 +34,12 @@ Describe "Node.js" {
         $nodePath.startsWith($expectedPath) | Should -BeTrue -Because "'$nodePath' is not started with '$expectedPath'"
     }
 
-    BeforeAll {
-    Write-Host "Architecture: $($env:PROCESSOR_ARCHITECTURE)"
-    Write-Host "OS: $($env:OS)"
-    }
-
   It "cached version is used without downloading" {
     # Set a custom variable to check for architecture and OS
-    $isArm64Windows = if ($IsWindows -and ([System.Environment]::Is64BitOperatingSystem) -and ($ENV:PROCESSOR_ARCHITECTURE -eq 'ARM64')) {$true} else {$false}
+    $isWindows = if ($IsWindows) {$true} else {$false}
     $isArm64Linux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux')) {$true} else {$false}
 
-    if (!$isArm64Windows -and !$isArm64Linux) {
+    if (!$isWindows -and !$isArm64Linux) {
         # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
         $useNodeLogFile = Get-UseNodeLogs
         $useNodeLogFile | Should -Exist
