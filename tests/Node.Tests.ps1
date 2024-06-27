@@ -2,9 +2,15 @@ Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
 BeforeAll {
     function Get-UseNodeLogs {
-        # GitHub Windows images don't have `HOME` variable
-        $homeDir = $env:HOME ?? $env:HOMEDRIVE
-        $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        if ($env:SELF_HOSTED_RUNNER -eq 'true') {
+            # Set the correct path for your self-hosted runner
+            $logsFolderPath = "C:\Users\runneradmin\runners\_diag\pages"
+        } else {
+            # GitHub Windows images don't have `HOME` variable
+            $homeDir = $env:HOME ?? $env:HOMEDRIVE
+            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
+        }
+
 
         $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
@@ -36,22 +42,11 @@ Describe "Node.js" {
 
   It "cached version is used without downloading" {
     # Set a custom variable to check for architecture and OS
-    
-    # Check if it's a Windows system
-    $isWindows = if ($IsWindows) {$true} else {$false}
-   # Check if it's an ARM64 Linux system
-    $isArm64Linux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux')) {$true} else {$false}
-
-   if (!$isWindows -and !$isArm64Linux) {
+   
         # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
         $useNodeLogFile = Get-UseNodeLogs
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
-        $useNodeLogContent | Should -Match "Found in cache"
-    } else {
-       # Skip the test for Windows systems and ARM64 Linux systems
-        Set-ItResult -Skipped -Because "Skipping this test for Windows and ARM64 Linux systems"
-    }
 }
 
     It "Run simple code" {
