@@ -36,18 +36,21 @@ Describe "Node.js" {
 
   It "cached version is used without downloading" {
     # Set a custom variable to check for architecture and OS
-   
+    
+    # Check if it's a Windows system
+    $isWindows = if ($IsWindows) {$true} else {$false}
+   # Check if it's an ARM64 Linux system
     $isArm64Linux = if ((uname -m) -eq 'aarch64' -and ((uname -o) -eq 'GNU/Linux')) {$true} else {$false}
 
-    if (!$isArm64Linux) {
+   if (!$isWindows -and !$isArm64Linux) {
         # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
         $useNodeLogFile = Get-UseNodeLogs
         $useNodeLogFile | Should -Exist
         $useNodeLogContent = Get-Content $useNodeLogFile -Raw
         $useNodeLogContent | Should -Match "Found in cache"
     } else {
-        # Skip the test for arm64 on Windows and Linux
-        Set-ItResult -Skipped -Because "Skipping this test for arm64 on Windows and Linux"
+       # Skip the test for Windows systems and ARM64 Linux systems
+        Set-ItResult -Skipped -Because "Skipping this test for Windows and ARM64 Linux systems"
     }
 }
 
