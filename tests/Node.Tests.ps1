@@ -9,7 +9,7 @@ BeforeAll {
             $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
-           } | Select-Object -First 1
+        } | Select-Object -First 1
         return $useNodeLogFile.Fullname
     }
 }
