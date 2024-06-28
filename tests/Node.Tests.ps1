@@ -6,7 +6,7 @@ BeforeAll {
             # GitHub Windows images don't have `HOME` variable
             $homeDir = $env:HOME ?? $env:HOMEDRIVE
             $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
-            $useNodeLogFile = Get-ChildItem -Path $logsFolderPath -ErrorAction SilentlyContinue | Where-Object {
+            $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
             $logContent = Get-Content $_.Fullname -Raw
             return $logContent -match "setup-node@v"
            } | Select-Object -First 1
