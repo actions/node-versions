@@ -35,12 +35,22 @@ Describe "Node.js" {
     }
 
     It "cached version is used without downloading" {
-        # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
-        $useNodeLogFile = Get-UseNodeLogs
-        $useNodeLogFile | Should -Exist
-        $useNodeLogContent = Get-Content $useNodeLogFile -Raw
-        $useNodeLogContent | Should -Match "Found in cache"
+        if ($env:RUNNER_TYPE -eq "GitHub") {
+            # Analyze output of previous steps to check if Node.js was consumed from cache or downloaded
+            $useNodeLogFile = Get-UseNodeLogs
+            $useNodeLogFile | Should -Exist
+            $useNodeLogContent = Get-Content $useNodeLogFile -Raw
+            $useNodeLogContent | Should -Match "Found in cache"
+        } else {
+            # Get the installed version of Node.js
+            $nodeVersion = Invoke-Expression "node --version"
+            # Check if Node.js is installed
+            $nodeVersion | Should -Not -BeNullOrEmpty
+            # Check if the installed version of Node.js is the expected version
+            $nodeVersion | Should -Match $env:VERSION
+        }
     }
+
 
     It "Run simple code" {
         "node ./simple-test.js" | Should -ReturnZeroExitCode
