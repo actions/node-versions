@@ -1,5 +1,9 @@
 Import-Module (Join-Path $PSScriptRoot "../helpers/pester-extensions.psm1")
 
+
+
+Describe "Node.js" {
+
 BeforeAll {
     function Get-UseNodeLogs {
       
@@ -14,7 +18,6 @@ BeforeAll {
     }
 }
 
-Describe "Node.js" {
     It "is available" {
         "node --version" | Should -ReturnZeroExitCode
     }
