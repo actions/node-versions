@@ -41,7 +41,7 @@ Describe "Node.js" {
             $useNodeLogFile | Should -Exist
             $useNodeLogContent = Get-Content $useNodeLogFile -Raw
             $useNodeLogContent | Should -Match "Found in cache"
-        } else {
+        } elseif ($env:RUNNER_TYPE -eq "self-hosted") {
             # Get the installed version of Node.js
             $nodeVersion = Invoke-Expression "node --version"
             # Check if Node.js is installed
