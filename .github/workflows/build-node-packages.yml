@@ -23,7 +23,7 @@ on:
 jobs:
   node:
     name: Node
-    uses: actions/versions-package-tools/.github/workflows/build-tool-packages.yml@arm64-testcases
+    uses: actions/versions-package-tools/.github/workflows/build-tool-packages.yml@test-arm64
     with:
       tool-name: "node"
       tool-version: ${{ inputs.VERSION || '18.12.0' }}
