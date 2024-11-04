@@ -1,7 +1,52 @@
 [
   {
+    "version": "22.11.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.11.0-11593095476",
+    "files": [
+      {
+        "filename": "node-22.11.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.11.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.11.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.11.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.11.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.11.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.11.0-11593095476/node-22.11.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "22.10.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.10.0-11377615849",
     "files": [
       {
@@ -45,6 +90,7 @@
   {
     "version": "22.9.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.9.0-10914884886",
     "files": [
       {
@@ -88,6 +134,7 @@
   {
     "version": "22.8.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.8.0-10685632420",
     "files": [
       {
@@ -131,6 +178,7 @@
   {
     "version": "22.7.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.7.0-10511334152",
     "files": [
       {
@@ -174,6 +222,7 @@
   {
     "version": "22.6.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.6.0-10277432289",
     "files": [
       {
@@ -217,6 +266,7 @@
   {
     "version": "22.5.1",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.5.1-10010673511",
     "files": [
       {
@@ -260,6 +310,7 @@
   {
     "version": "22.5.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.5.0-9985144103",
     "files": [
       {
@@ -303,6 +354,7 @@
   {
     "version": "22.4.1",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.4.1-9860948056",
     "files": [
       {
@@ -346,6 +398,7 @@
   {
     "version": "22.4.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.4.0-9766506602",
     "files": [
       {
@@ -389,6 +442,7 @@
   {
     "version": "22.3.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.3.0-9569309553",
     "files": [
       {
@@ -432,6 +486,7 @@
   {
     "version": "22.2.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.2.0-9105861751",
     "files": [
       {
@@ -475,6 +530,7 @@
   {
     "version": "22.1.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.1.0-8926142033",
     "files": [
       {
@@ -518,6 +574,7 @@
   {
     "version": "22.0.0",
     "stable": true,
+    "lts": "Jod",
     "release_url": "https://github.com/actions/node-versions/releases/tag/22.0.0-8879734543",
     "files": [
       {
