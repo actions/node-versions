@@ -23,7 +23,7 @@ on:
 jobs:
   node:
     name: Node
-    uses: HarithaVattikuti/versions-package-tools/.github/workflows/build-tool-packages.yml@Nodearm647z
+    uses: actions/versions-package-tools/.github/workflows/build-tool-packages.yml@Nodearm647z
     with:
       tool-name: "node"
       tool-version: ${{ inputs.VERSION || '18.12.0' }}
