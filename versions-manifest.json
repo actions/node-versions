@@ -1874,6 +1874,44 @@
     ]
   },
   {
+    "version": "18.20.7",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.20.7-13438827950",
+    "files": [
+      {
+        "filename": "node-18.20.7-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "18.20.6",
     "stable": true,
     "lts": "Hydrogen",
