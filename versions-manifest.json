@@ -1,5 +1,48 @@
 [
   {
+    "version": "24.3.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.3.0-15866716565",
+    "files": [
+      {
+        "filename": "node-24.3.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.3.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "24.2.0",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.2.0-15549907769",
@@ -211,6 +254,50 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.17.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.17.0-15866718879",
+    "files": [
+      {
+        "filename": "node-22.17.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.17.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-win32-x64.7z"
       }
     ]
   },
