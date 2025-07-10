@@ -17,27 +17,12 @@ Describe "Node.js" {
             $logsFolderPath = $possiblePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
             $resolvedPath = Resolve-Path -Path $logsFolderPath -ErrorAction SilentlyContinue
 
-            if (-not [string]::IsNullOrEmpty($resolvedPath) -and (Test-Path $resolvedPath)) {
-                if ($logsFolderPath -eq "actions-runner/cached/_diag/pages") {
-                    try {
-                        $useNodeLogFile = Get-ChildItem -Path $logsFolderPath -File| Where-Object {
-                            if (-not $_.PSIsContainer) { # Ensure it's not a directory
-                                $logContent = Get-Content $_.Fullname -Raw
-                                return $logContent -match "setup-node@v"
-                            }
-                        } | Select-Object -First 1 
-                    } catch {
-                        Write-Error "Failed to resolve path: $logsFolderPath"
-                    }
-                } else {
-                    $useNodeLogFile = Get-ChildItem -Path $resolvedPath | Where-Object {
-                        if (-not $_.PSIsContainer) { # Ensure it's not a directory
+            if ($resolvedPath -and -not [string]::IsNullOrEmpty($resolvedPath.Path) -and (Test-Path $resolvedPath.Path)) {                
+                $useNodeLogFile = Get-ChildItem -Path $resolvedPath | Where-Object {
                             $logContent = Get-Content $_.Fullname -Raw
-                            return $logContent -match "setup-node@v"
-                        }
+                            return $logContent -match "setup-node@v"                     
                     } | Select-Object -First 1                
-                }
-
+                
               # Return the file name if a match is found
                 if ($useNodeLogFile) {
                     return $useNodeLogFile.FullName
