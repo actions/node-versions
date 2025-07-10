@@ -27,7 +27,7 @@ Describe "Node.js" {
                 if ($useNodeLogFile) {
                     return $useNodeLogFile.FullName
                 } else {
-                    Write-Error "No matching log file found in the specified path."
+                    Write-Error "No matching log file found in the specified path: $($resolvedPath.Path)"
                 }
             } else {
                 Write-Error "The provided logs folder path is null, empty, or does not exist: $logsFolderPath"
