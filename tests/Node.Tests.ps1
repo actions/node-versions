@@ -8,9 +8,17 @@ Describe "Node.js" {
         function Get-UseNodeLogs {
             # GitHub Windows images don't have `HOME` variable
             $homeDir = $env:HOME ?? $env:HOMEDRIVE
-            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
-    
-            $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
+            
+            $possiblePaths = @(
+                Join-Path -Path $homeDir -ChildPath "actions-runner/cached/_diag/pages"
+                Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages"
+            )
+            
+            $logsFolderPath = $possiblePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
+
+            Write-Host "Logs folder path: $logsFolderPath"
+
+            $useNodeLogFile = Get-ChildItem -Path $logsFolderPath -File | Where-Object {
                 $logContent = Get-Content $_.Fullname -Raw
                 return $logContent -match "setup-node@v"
             } | Select-Object -First 1
