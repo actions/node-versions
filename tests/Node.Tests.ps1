@@ -8,13 +8,30 @@ Describe "Node.js" {
         function Get-UseNodeLogs {
             # GitHub Windows images don't have `HOME` variable
             $homeDir = $env:HOME ?? $env:HOMEDRIVE
-            $logsFolderPath = Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages" -Resolve
-    
-            $useNodeLogFile = Get-ChildItem -Path $logsFolderPath | Where-Object {
-                $logContent = Get-Content $_.Fullname -Raw
-                return $logContent -match "setup-node@v"
-            } | Select-Object -First 1
-            return $useNodeLogFile.Fullname
+            
+            $possiblePaths = @(
+                Join-Path -Path $homeDir -ChildPath "actions-runner/cached/_diag/pages"
+                Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages"
+            )
+            
+            $logsFolderPath = $possiblePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
+            $resolvedPath = Resolve-Path -Path $logsFolderPath -ErrorAction SilentlyContinue
+
+            if ($resolvedPath -and -not [string]::IsNullOrEmpty($resolvedPath.Path) -and (Test-Path $resolvedPath.Path)) {                
+                $useNodeLogFile = Get-ChildItem -Path $resolvedPath | Where-Object {
+                            $logContent = Get-Content $_.Fullname -Raw
+                            return $logContent -match "setup-node@v"                     
+                    } | Select-Object -First 1                
+                
+              # Return the file name if a match is found
+                if ($useNodeLogFile) {
+                    return $useNodeLogFile.FullName
+                } else {
+                    Write-Error "No matching log file found in the specified path: $($resolvedPath.Path)"
+                }
+            } else {
+                Write-Error "The provided logs folder path is null, empty, or does not exist: $logsFolderPath"
+            }
         }
     }
     
