@@ -1,0 +1,15 @@
+import VoteForm from '../components/VoteForm';
+import VoteChart from '../components/VoteChart';
+
+export default function VotePage() {
+  const proposalId = 1;
+  const options = ['بله', 'خیر', 'ممتنع'];
+
+  return (
+    <div className="p-6 bg-black text-white">
+      <h2 className="text-green-400 text-xl mb-4">🗳️ رأی‌گیری عمومی</h2>
+      <VoteForm proposalId={proposalId} />
+      <VoteChart proposalId={proposalId} />
+    </div>
+  );
+}
