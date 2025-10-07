@@ -1,0 +1,20 @@
+function NFTGallery({ accountId }) {
+  const [nfts, setNfts] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/nfts?accountId=${accountId}`)
+      .then(res => res.json())
+      .then(data => setNfts(data.nfts));
+  }, []);
+
+  return (
+    <div className="grid grid-cols-2 gap-4 mt-4">
+      {nfts.map(nft => (
+        <div key={nft._id} className="bg-gray-800 p-2 rounded">
+          <img src={nft.imageUrl} alt={nft.name} className="rounded mb-2" />
+          <p className="text-white text-sm">{nft.name}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
