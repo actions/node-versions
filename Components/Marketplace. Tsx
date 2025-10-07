@@ -1,0 +1,26 @@
+import { getContract } from '../lib/contract';
+import { ethers } from 'ethers';
+
+export default function Marketplace({ items }) {
+  const buyItem = async (itemId, price) => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const contract = getContract(signer);
+    await contract.buyItem(itemId, {
+      value: ethers.utils.parseUnits(price.toString(), 18),
+    });
+    alert('✅ خرید انجام شد');
+  };
+
+  return (
+    <div>
+      {items.map(item => (
+        <div key={item._id}>
+          <img src={item.imageUrl} />
+          <p>{item.name}</p>
+          <button onClick={() => buyItem(item._id, item.price)}>خرید با GHT</button>
+        </div>
+      ))}
+    </div>
+  );
+}
