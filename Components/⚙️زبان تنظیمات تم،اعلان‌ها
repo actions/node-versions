@@ -1,0 +1,34 @@
+function SettingsPage() {
+  const [language, setLanguage] = useState('fa');
+  const [theme, setTheme] = useState('dark');
+  const [notifications, setNotifications] = useState(true);
+
+  const saveSettings = async () => {
+    await fetch('/api/settings', {
+      method: 'POST',
+      body: JSON.stringify({ language, theme, notifications }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    alert('✅ تنظیمات ذخیره شد');
+  };
+
+  return (
+    <div className="p-6 bg-gray-900 text-white">
+      <h2 className="text-green-400 text-xl mb-4">⚙️ تنظیمات کاربر</h2>
+      <select value={language} onChange={e => setLanguage(e.target.value)}>
+        <option value="fa">🇮🇷 فارسی</option>
+        <option value="en">🇺🇸 English</option>
+        <option value="es">🇪🇸 Español</option>
+      </select>
+      <select value={theme} onChange={e => setTheme(e.target.value)}>
+        <option value="dark">🌙 شب</option>
+        <option value="light">☀️ روز</option>
+      </select>
+      <label>
+        <input type="checkbox" checked={notifications} onChange={e => setNotifications(e.target.checked)} />
+        اعلان‌ها فعال باشند
+      </label>
+      <button onClick={saveSettings}>ذخیره</button>
+    </div>
+  );
+}
