@@ -1,0 +1,22 @@
+import { useState } from 'react';
+import { getContract } from '../lib/contract';
+import { ethers } from 'ethers';
+
+export default function VoteForm({ proposalId }: { proposalId: number }) {
+  const [choice, setChoice] = useState('');
+
+  const submitVote = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    const contract = getContract(signer);
+    await contract.vote(proposalId, choice);
+    alert('✅ رأی ثبت شد');
+  };
+
+  return (
+    <div>
+      <input value={choice} onChange={e => setChoice(e.target.value)} placeholder="انتخاب شما" />
+      <button onClick={submitVote}>ثبت رأی</button>
+    </div>
+  );
+}
