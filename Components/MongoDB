@@ -1,0 +1,7 @@
+const InviteSchema = new mongoose.Schema({
+  tokenId: String,
+  imageUrl: String,
+  used: { type: Boolean, default: false },
+  invitedBy: mongoose.Schema.Types.ObjectId,
+  expiresAt: Date,
+});
