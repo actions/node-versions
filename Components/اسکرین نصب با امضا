@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "🚀 نصب Gamehub Vault در حال انجام است..."
+
+git clone https://github.com/apz-eth/gamehub-vault.git
+cd gamehub-vault
+
+npm install
+
+echo "🔐 تأیید امضا..."
+echo "امضای رسمی: apz.eth"
+echo "SHA256: $(shasum -a 256 install.sh)"
+
+echo "✅ لطفاً فایل .env را تنظیم کنید و سپس اجرا کنید:"
+echo "npm run dev"
