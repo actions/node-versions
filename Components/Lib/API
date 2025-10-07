@@ -1,0 +1,17 @@
+// pages/api/vote.ts
+import Vote from '../../models/Vote';
+import { connectDB } from '../../lib/db';
+
+export default async function handler(req, res) {
+  await connectDB();
+
+  if (req.method === 'POST') {
+    const { proposalId, accountId, choice } = req.body;
+    const vote = await Vote.findById(proposalId);
+    vote.votes.push({ accountId, choice });
+    await vote.save();
+    return res.status(200).json({ success: true });
+  }
+
+  res.status(405).end();
+}
