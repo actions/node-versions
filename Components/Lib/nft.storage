@@ -1,0 +1,13 @@
+import { NFTStorage, File } from 'nft.storage';
+
+const client = new NFTStorage({ token: process.env.NFT_STORAGE_KEY });
+
+export async function uploadToIPFS(imageBuffer: Buffer, name: string, description: string) {
+  const metadata = await client.store({
+    name,
+    description,
+    image: new File([imageBuffer], 'nft.png', { type: 'image/png' }),
+  });
+
+  return metadata.url;
+}
