@@ -1,0 +1,1 @@
+gpgv --keyring="./nodejs-keyring.kbx" --output SHASUMS256.txt < SHASUMS256.txt.asc
