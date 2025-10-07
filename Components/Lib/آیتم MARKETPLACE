@@ -1,0 +1,19 @@
+function Marketplace() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch('/api/items').then(res => res.json()).then(data => setItems(data.items));
+  }, []);
+
+  return (
+    <div className="grid grid-cols-2 gap-4">
+      {items.map(item => (
+        <div key={item._id} className="bg-gray-900 p-4 rounded">
+          <img src={item.imageUrl} className="rounded mb-2" />
+          <h3 className="text-white">{item.name}</h3>
+          <p className="text-green-400">{item.price} GHT</p>
+        </div>
+      ))}
+    </div>
+  );
+}
