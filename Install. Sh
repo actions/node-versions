@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "🚀 نصب Gamehub Vault در حال انجام است..."
+
+git clone https://github.com/apz-eth/gamehub-vault.git
+cd gamehub-vault
+
+npm install
+cp .env.example .env
+
+echo "🔐 لطفاً مقادیر .env را تنظیم کنید (RPC, CONTRACT, NFT_STORAGE_KEY)"
+echo "✅ سپس دستور زیر را اجرا کنید:"
+echo "npm run dev"
