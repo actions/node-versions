@@ -1,0 +1,11 @@
+{
+  "name": "gamehub-vault-installer",
+  "version": "1.0.0",
+  "description": "🛠️ نصب‌کننده خودکار پروژه GameHub Vault",
+  "bin": {
+    "gamehub-vault-installer": "installer.js"
+  },
+  "author": "Khalil | GameHub Labs",
+  "license": "MIT",
+  "dependencies": {}
+}
