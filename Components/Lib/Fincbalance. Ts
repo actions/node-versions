@@ -1,0 +1,26 @@
+import puppeteer from 'puppeteer';
+
+export async function fetchBalance(username: string, password: string): Promise<number> {
+  const browser = await puppeteer.launch({ headless: 'new' });
+  const page = await browser.newPage();
+
+  try {
+    await page.goto('https://crypbyu.com/login', { waitUntil: 'networkidle2' });
+
+    await page.type('#username', username);
+    await page.type('#password', password);
+    await page.click('#login-button');
+
+    await page.waitForNavigation({ waitUntil: 'networkidle2' });
+
+    const balanceText = await page.$eval('#balance', el => el.textContent || '0');
+    const balance = parseFloat(balanceText.replace(/[^0-9.]/g, ''));
+
+    await browser.close();
+    return balance;
+  } catch (error) {
+    console.error('❌ خطا در دریافت موجودی:', error);
+    await browser.close();
+    return 0;
+  }
+}
