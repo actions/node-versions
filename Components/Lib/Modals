@@ -1,0 +1,10 @@
+// models/Vote.ts
+import mongoose from 'mongoose';
+
+const VoteSchema = new mongoose.Schema({
+  proposal: String,
+  options: [String],
+  votes: [{ accountId: mongoose.Schema.Types.ObjectId, choice: String }],
+});
+
+export default mongoose.models.Vote || mongoose.model('Vote', VoteSchema);
