@@ -1,0 +1,7 @@
+import { ethers } from 'ethers';
+import abi from '../abi/gamehub.json';
+
+export function getContract(signerOrProvider: any) {
+  const address = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS!;
+  return new ethers.Contract(address, abi, signerOrProvider);
+}
