@@ -1,0 +1,34 @@
+ پیش‌نیازها
+
+قبل از اجرا، مطمئن شوید که موارد زیر روی سیستم شما نصب هستند:
+
+- Node.js (نسخه 18 یا بالاتر)
+- npm
+- Git
+
+---
+
+🔐 پیکربندی محیطی
+
+فایل .env.local به‌صورت خودکار ساخته می‌شود. شما می‌توانید مقادیر زیر را پس از نصب ویرایش کنید:
+
+`env
+NEXTPUBLICINFURAPROJECTID=yourinfuraid
+NEXTPUBLICWALLETCONNECTPROJECTID=yourwalletconnectid
+TELEGRAMBOTTOKEN=yourtelegrambot_token
+MONGODBURI=yourmongodbconnectionstring
+NEXTAUTHSECRET=yournextauthsecretkey
+NEXTAUTH_URL=http://localhost:3000
+`
+
+---
+
+📞 پشتیبانی
+
+در صورت بروز مشکل یا سؤال، با ما در ارتباط باشید:
+
+- GitHub Issues: github.com/your-username/gamehub-vault/issues
+- Telegram: @gamehubsupport
+- ایمیل: support@gamehub.io
+
+---
