@@ -1,0 +1,10 @@
+import { getDefaultProvider } from 'ethers';
+import { ENS } from '@ensdomains/ensjs';
+
+const provider = getDefaultProvider('mainnet');
+const ens = new ENS({ provider, ensAddress: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e' });
+
+export async function resolveENS(address: string) {
+  const name = await ens.getName(address);
+  return name.name || address;
+}
