@@ -1,0 +1,20 @@
+function SendInviteForm() {
+  const [recipient, setRecipient] = useState('');
+
+  const sendInvite = async () => {
+    const res = await fetch('/api/send-invite', {
+      method: 'POST',
+      body: JSON.stringify({ recipient }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    const data = await res.json();
+    alert(data.success ? '✅ دعوت‌نامه ارسال شد' : '❌ خطا در ارسال');
+  };
+
+  return (
+    <div>
+      <input placeholder="آدرس کیف پول یا ایمیل" value={recipient} onChange={e => setRecipient(e.target.value)} />
+      <button onClick={sendInvite}>ارسال دعوت‌نامه NFT</button>
+    </div>
+  );
+}
