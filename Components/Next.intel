@@ -1,0 +1,15 @@
+function LanguageSwitcher() {
+  const router = useRouter();
+
+  const switchLang = (locale: string) => {
+    router.push(router.pathname, router.asPath, { locale });
+  };
+
+  return (
+    <div className="flex gap-2">
+      <button onClick={() => switchLang('fa')}>🇮🇷 فارسی</button>
+      <button onClick={() => switchLang('en')}>🇺🇸 English</button>
+      <button onClick={() => switchLang('es')}>🇪🇸 Español</button>
+    </div>
+  );
+}
