@@ -1,0 +1,1 @@
+shasum --check SHASUMS256.txt --ignore-missing
