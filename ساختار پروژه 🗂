@@ -1,0 +1,44 @@
+gamehub-vault/
+├── public/
+│   ├── cyber-lion.gif
+│   ├── icon-192.png
+│   ├── icon-512.png
+│   └── manifest.json
+├── pages/
+│   ├── index.tsx
+│   ├── dashboard.tsx
+│   ├── marketplace.tsx
+│   ├── vote.tsx
+│   └── api/
+│       ├── register.ts
+│       ├── vote.ts
+│       ├── vote-stats.ts
+│       ├── leaderboard.ts
+│       ├── request-invite.ts
+│       ├── generate-invite.ts
+│       └── notify.ts
+├── components/
+│   ├── Splash.tsx
+│   ├── MobileSplash.tsx
+│   ├── VoteForm.tsx
+│   ├── VoteChart.tsx
+│   ├── Leaderboard.tsx
+│   ├── InviteQR.tsx
+│   └── ThemeToggle.tsx
+├── lib/
+│   ├── ens.ts
+│   ├── ipfs.ts
+│   ├── telegram.ts
+│   ├── push.ts
+│   └── contract.ts
+├── models/
+│   ├── User.ts
+│   ├── Invite.ts
+│   ├── Vote.ts
+│   ├── Score.ts
+│   └── Item.ts
+├── styles/
+│   └── globals.css
+├── install.sh
+├── README.md
+└── next.config.js
