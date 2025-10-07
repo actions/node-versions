@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# نسخه مورد نظر
+VERSION="v22.2.0"
+NODE_DIR="node-$VERSION-linux-x64"
+KEYRING="nodejs-keyring.kbx"
+
+echo "🔐 نصب امن Node.js نسخه $VERSION"
+
+# مرحله 1: دانلود فایل‌ها
+echo "📥 دانلود فایل‌های Node.js و امضا..."
+curl -O https://nodejs.org/dist/$VERSION/$NODE_DIR.tar.xz
+curl -O https://nodejs.org/dist/$VERSION/SHASUMS256.txt.asc
+
+# مرحله 2: دریافت keyring رسمی Node.js
+echo "🔑 دریافت keyring رسمی Node.js..."
+curl -fsLo "$KEYRING" "https://github.com/nodejs/release-keys/raw/HEAD/gpg/pubring.kbx"
+
+# مرحله 3: تأیید امضای دیجیتال
+echo "🧾 بررسی امضای دیجیتال..."
+gpgv --keyring="./$KEYRING" --output SHASUMS256.txt < SHASUMS256.txt.asc
+
+# مرحله 4: بررسی هش فایل
+echo "🔍 بررسی صحت فایل دانلودشده..."
+shasum --check SHASUMS256.txt --ignore-missing
+
+# مرحله 5: نصب Node.js
+echo "📦 نصب Node.js در مسیر /opt/nodejs..."
+sudo mkdir -p /opt/nodejs
+sudo tar -xf $NODE_DIR.tar.xz -C /opt/nodejs --strip-components=1
+sudo ln -sf /opt/nodejs/bin/node /usr/local/bin/node
+sudo ln -sf /opt/nodejs/bin/npm /usr/local/bin/npm
+
+# مرحله 6: بررسی نهایی
+echo "✅ نسخه نصب‌شده:"
+node -v
+npm -v
+
+echo "🎉 نصب امن Node.js با موفقیت انجام شد!"
