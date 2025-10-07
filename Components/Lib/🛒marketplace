@@ -1,0 +1,12 @@
+// models/Item.ts
+import mongoose from 'mongoose';
+
+const ItemSchema = new mongoose.Schema({
+  name: String,
+  price: Number,
+  imageUrl: String,
+  description: String,
+  owner: mongoose.Schema.Types.ObjectId,
+});
+
+export default mongoose.models.Item || mongoose.model('Item', ItemSchema);
