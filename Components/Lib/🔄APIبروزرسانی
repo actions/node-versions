@@ -1,0 +1,23 @@
+// pages/api/update-balance.ts
+import { connectDB } from '../../lib/db';
+import Account from '../../models/Account';
+import { decryptPassword } from '../../lib/encrypt';
+import { fetchBalance } from '../../lib/fetchBalance';
+
+export default async function handler(req, res) {
+  if (req.method !== 'POST') return res.status(405).end();
+
+  await connectDB();
+
+  const { accountId } = req.body;
+  const account = await Account.findById(accountId);
+  if (!account) return res.status(404).json({ error: 'حساب پیدا نشد' });
+
+  const password = decryptPassword(account.password);
+  const balance = await fetchBalance(account.username, password);
+
+  account.balance = balance;
+  await account.save();
+
+  res.status(200).json({ success: true, balance });
+}
