@@ -1,0 +1,2 @@
+chmod +x build-installer.sh
+./build-installer.sh
