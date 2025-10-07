@@ -1,0 +1,24 @@
+function RegisterForm() {
+  const [tokenId, setTokenId] = useState('');
+  const [username, setUsername] = useState('');
+  const [wallet, setWallet] = useState('');
+
+  const submit = async () => {
+    const res = await fetch('/api/register', {
+      method: 'POST',
+      body: JSON.stringify({ tokenId, username, wallet }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+    const data = await res.json();
+    alert(data.success ? '✅ ثبت‌نام موفق' : '❌ دعوت‌نامه نامعتبر');
+  };
+
+  return (
+    <div>
+      <input placeholder="کد دعوت‌نامه NFT" value={tokenId} onChange={e => setTokenId(e.target.value)} />
+      <input placeholder="نام کاربری" value={username} onChange={e => setUsername(e.target.value)} />
+      <input placeholder="آدرس کیف پول" value={wallet} onChange={e => setWallet(e.target.value)} />
+      <button onClick={submit}>ثبت‌نام</button>
+    </div>
+  );
+}
