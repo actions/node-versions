@@ -1,7 +1,52 @@
 [
   {
+    "version": "24.11.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.11.0-18894910158",
+    "files": [
+      {
+        "filename": "node-24.11.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.11.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "24.10.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.10.0-18453495281",
     "files": [
       {
@@ -45,6 +90,7 @@
   {
     "version": "24.9.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.9.0-18024003193",
     "files": [
       {
@@ -88,6 +134,7 @@
   {
     "version": "24.8.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.8.0-17630522236",
     "files": [
       {
@@ -131,6 +178,7 @@
   {
     "version": "24.7.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.7.0-17283839804",
     "files": [
       {
@@ -174,6 +222,7 @@
   {
     "version": "24.6.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.6.0-16980723897",
     "files": [
       {
@@ -217,6 +266,7 @@
   {
     "version": "24.5.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.5.0-16666195981",
     "files": [
       {
@@ -260,6 +310,7 @@
   {
     "version": "24.4.1",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.4.1-16309768053",
     "files": [
       {
@@ -303,6 +354,7 @@
   {
     "version": "24.4.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.4.0-16210503505",
     "files": [
       {
@@ -346,6 +398,7 @@
   {
     "version": "24.3.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.3.0-15866716565",
     "files": [
       {
@@ -389,6 +442,7 @@
   {
     "version": "24.2.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.2.0-15549907769",
     "files": [
       {
@@ -432,6 +486,7 @@
   {
     "version": "24.1.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.1.0-15177436545",
     "files": [
       {
@@ -475,6 +530,7 @@
   {
     "version": "24.0.2",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.2-15035852679",
     "files": [
       {
@@ -518,6 +574,7 @@
   {
     "version": "24.0.1",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.1-14928016774",
     "files": [
       {
@@ -561,6 +618,7 @@
   {
     "version": "24.0.0",
     "stable": true,
+    "lts": "Krypton",
     "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.0-14863421234",
     "files": [
       {
@@ -598,6 +656,50 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.21.1",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.21.1-18894912842",
+    "files": [
+      {
+        "filename": "node-22.21.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.21.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-win32-x64.7z"
       }
     ]
   },
