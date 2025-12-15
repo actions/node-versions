@@ -1,5 +1,1281 @@
 [
   {
+    "version": "24.11.1",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.11.1-19282993875",
+    "files": [
+      {
+        "filename": "node-24.11.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.11.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.11.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.11.0-18894910158",
+    "files": [
+      {
+        "filename": "node-24.11.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.11.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.11.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.11.0-18894910158/node-24.11.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.10.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.10.0-18453495281",
+    "files": [
+      {
+        "filename": "node-24.10.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.10.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.10.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.10.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.10.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.10.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.10.0-18453495281/node-24.10.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.9.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.9.0-18024003193",
+    "files": [
+      {
+        "filename": "node-24.9.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.9.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.9.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.9.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.9.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.9.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.9.0-18024003193/node-24.9.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.8.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.8.0-17630522236",
+    "files": [
+      {
+        "filename": "node-24.8.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.8.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.8.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.8.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.8.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.8.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.8.0-17630522236/node-24.8.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.7.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.7.0-17283839804",
+    "files": [
+      {
+        "filename": "node-24.7.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.7.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.7.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.7.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.7.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.7.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.7.0-17283839804/node-24.7.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.6.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.6.0-16980723897",
+    "files": [
+      {
+        "filename": "node-24.6.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.6.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.6.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.6.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.6.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.6.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.6.0-16980723897/node-24.6.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.5.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.5.0-16666195981",
+    "files": [
+      {
+        "filename": "node-24.5.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.5.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.5.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.5.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.5.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.5.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.5.0-16666195981/node-24.5.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.4.1",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.4.1-16309768053",
+    "files": [
+      {
+        "filename": "node-24.4.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.4.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.1-16309768053/node-24.4.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.4.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.4.0-16210503505",
+    "files": [
+      {
+        "filename": "node-24.4.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.4.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.4.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.4.0-16210503505/node-24.4.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.3.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.3.0-15866716565",
+    "files": [
+      {
+        "filename": "node-24.3.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.3.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.3.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.3.0-15866716565/node-24.3.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.2.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.2.0-15549907769",
+    "files": [
+      {
+        "filename": "node-24.2.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.2.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.2.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.2.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.2.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.2.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.2.0-15549907769/node-24.2.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.1.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.1.0-15177436545",
+    "files": [
+      {
+        "filename": "node-24.1.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.1.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.1.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.1.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.1.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.1.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.1.0-15177436545/node-24.1.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.0.2",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.2-15035852679",
+    "files": [
+      {
+        "filename": "node-24.0.2-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.2-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.2-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.0.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.2-15035852679/node-24.0.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.0.1",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.1-14928016774",
+    "files": [
+      {
+        "filename": "node-24.0.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.0.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.1-14928016774/node-24.0.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "24.0.0",
+    "stable": true,
+    "lts": "Krypton",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/24.0.0-14863421234",
+    "files": [
+      {
+        "filename": "node-24.0.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-24.0.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-24.0.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/24.0.0-14863421234/node-24.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.21.1",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.21.1-18894912842",
+    "files": [
+      {
+        "filename": "node-22.21.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.21.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.1-18894912842/node-22.21.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.21.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.21.0-18671149699",
+    "files": [
+      {
+        "filename": "node-22.21.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.21.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.21.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.21.0-18671149699/node-22.21.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.20.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.20.0-17993202319",
+    "files": [
+      {
+        "filename": "node-22.20.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.20.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.20.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.20.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.20.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.20.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.20.0-17993202319/node-22.20.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.19.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.19.0-17311483029",
+    "files": [
+      {
+        "filename": "node-22.19.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.19.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.19.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.19.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.19.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.19.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.19.0-17311483029/node-22.19.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.18.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.18.0-16666198358",
+    "files": [
+      {
+        "filename": "node-22.18.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.18.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.18.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.18.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.18.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.18.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.18.0-16666198358/node-22.18.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.17.1",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.17.1-16309770702",
+    "files": [
+      {
+        "filename": "node-22.17.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.17.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.1-16309770702/node-22.17.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.17.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.17.0-15866718879",
+    "files": [
+      {
+        "filename": "node-22.17.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.17.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.17.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.17.0-15866718879/node-22.17.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.16.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.16.0-15177438473",
+    "files": [
+      {
+        "filename": "node-22.16.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.16.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.16.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.16.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.16.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.16.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.16.0-15177438473/node-22.16.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.15.1",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.15.1-15035854612",
+    "files": [
+      {
+        "filename": "node-22.15.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.15.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.1-15035854612/node-22.15.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.15.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.15.0-14621731016",
+    "files": [
+      {
+        "filename": "node-22.15.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.15.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.15.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.15.0-14621731016/node-22.15.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.14.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.14.0-13265982013",
+    "files": [
+      {
+        "filename": "node-22.14.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.14.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.14.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.14.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.14.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.14.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.14.0-13265982013/node-22.14.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.13.1",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.13.1-12900459766",
+    "files": [
+      {
+        "filename": "node-22.13.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.13.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.1-12900459766/node-22.13.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "22.13.0",
+    "stable": true,
+    "lts": "Jod",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/22.13.0-12683784390",
+    "files": [
+      {
+        "filename": "node-22.13.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-22.13.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-22.13.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/22.13.0-12683784390/node-22.13.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "22.12.0",
     "stable": true,
     "lts": "Jod",
@@ -656,6 +1932,358 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/22.0.0-8879734543/node-22.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.5",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.5-17451167955",
+    "files": [
+      {
+        "filename": "node-20.19.5-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.5-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.5-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.5-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.5-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.5-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.5-17451167955/node-20.19.5-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.4",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.4-16309772647",
+    "files": [
+      {
+        "filename": "node-20.19.4-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.4-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.4-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.4-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.4-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.4-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.4-16309772647/node-20.19.4-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.3",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.3-15828158811",
+    "files": [
+      {
+        "filename": "node-20.19.3-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.3-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.3-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.3-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.3-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.3-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.3-15828158811/node-20.19.3-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.2",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.2-15035857406",
+    "files": [
+      {
+        "filename": "node-20.19.2-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.2-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.2-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.2-15035857406/node-20.19.2-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.1",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.1-14598289899",
+    "files": [
+      {
+        "filename": "node-20.19.1-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.1-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.1-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.1-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.1-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.1-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.1-14598289899/node-20.19.1-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.19.0",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.19.0-13838090974",
+    "files": [
+      {
+        "filename": "node-20.19.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.19.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.19.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.19.0-13838090974/node-20.19.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.18.3",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.18.3-13244516310",
+    "files": [
+      {
+        "filename": "node-20.18.3-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.3-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.3-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.3-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.3-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.18.3-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.3-13244516310/node-20.18.3-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "20.18.2",
+    "stable": true,
+    "lts": "Iron",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/20.18.2-12900461873",
+    "files": [
+      {
+        "filename": "node-20.18.2-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.2-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.2-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.2-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-20.18.2-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-win32-arm64.7z"
+      },
+      {
+        "filename": "node-20.18.2-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/20.18.2-12900461873/node-20.18.2-win32-x64.7z"
       }
     ]
   },
@@ -1650,6 +3278,120 @@
         "arch": "x64",
         "platform": "win32",
         "download_url": "https://github.com/actions/node-versions/releases/download/20.0.0-4805425216/node-20.0.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.20.8",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.20.8-14110393767",
+    "files": [
+      {
+        "filename": "node-18.20.8-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.8-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.8-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.8-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.8-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.8-14110393767/node-18.20.8-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.20.7",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.20.7-13438827950",
+    "files": [
+      {
+        "filename": "node-18.20.7-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.7-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.7-13438827950/node-18.20.7-win32-x64.7z"
+      }
+    ]
+  },
+  {
+    "version": "18.20.6",
+    "stable": true,
+    "lts": "Hydrogen",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/18.20.6-12900463507",
+    "files": [
+      {
+        "filename": "node-18.20.6-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.6-12900463507/node-18.20.6-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.6-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.6-12900463507/node-18.20.6-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.6-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.6-12900463507/node-18.20.6-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.6-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.6-12900463507/node-18.20.6-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-18.20.6-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/18.20.6-12900463507/node-18.20.6-win32-x64.7z"
       }
     ]
   },
