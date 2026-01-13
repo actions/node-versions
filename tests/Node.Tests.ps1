@@ -6,14 +6,20 @@ Describe "Node.js" {
 
     BeforeAll {
         function Get-UseNodeLogs {
-            # GitHub Windows images don't have `HOME` variable
-            $homeDir = $env:HOME ?? $env:HOMEDRIVE
-            
-            $possiblePaths = @(
-                Join-Path -Path $homeDir -ChildPath "actions-runner/cached/_diag/pages"
-                Join-Path -Path $homeDir -ChildPath "runners/*/_diag/pages"
-                Join-Path -Path $homeDir -ChildPath "actions-runner/extracted/_diag/pages"                
-            )
+            $runnerProc = Get-Process -Name "Runner.Listener" -ErrorAction SilentlyContinue | Select-Object -First 1
+            #Write-Host "`$runnerProc: $($runnerProc | Out-String)"
+            if (-not $runnerProc -or -not $runnerProc.Path) {
+                Write-Error "Runner.Listener process not found."
+                return
+            }
+            # Go up two directories to get runner root
+            $runnerRoot = Split-Path (Split-Path $runnerProc.Path -Parent) -Parent
+            #Write-Host "`$runnerRoot: $runnerRoot"
+            # Recursively find all _diag/pages folders under $homeDir(not homedir-replace with runnerroot)
+            $possiblePaths = Get-ChildItem -Path $runnerRoot -Directory -Recurse -ErrorAction SilentlyContinue |
+                Where-Object { $_.FullName -like "*_diag\pages" -or $_.FullName -like "*_diag/pages" }
+            Write-Host "`LogsPaths:"
+            $possiblePaths | ForEach-Object { Write-Host $_.FullName }
             
             $logsFolderPath = $possiblePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
             $resolvedPath = Resolve-Path -Path $logsFolderPath -ErrorAction SilentlyContinue
