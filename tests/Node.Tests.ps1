@@ -16,13 +16,15 @@ Describe "Node.js" {
             $runnerRoot = Split-Path (Split-Path $runnerProc.Path -Parent) -Parent
             #Write-Host "`$runnerRoot: $runnerRoot"
             # Recursively find all _diag/pages folders under the runner root directory
-            $possiblePaths = Get-ChildItem -Path $runnerRoot -Directory -Recurse -ErrorAction SilentlyContinue |
+            $possiblePaths = Get-ChildItem -Path $runnerRoot -Directory -Recurse -Depth 4 -ErrorAction SilentlyContinue |
                 Where-Object { $_.FullName -like "*_diag\pages" -or $_.FullName -like "*_diag/pages" }
-            Write-Host "`LogsPaths:"
+            Write-Host "LogsPaths:"
             $possiblePaths | ForEach-Object { Write-Host $_.FullName }
             
             $logsFolderPath = $possiblePaths | Where-Object { Test-Path $_ } | Select-Object -First 1
-            $resolvedPath = Resolve-Path -Path $logsFolderPath -ErrorAction SilentlyContinue
+            if ($logsFolderPath) {
+                $resolvedPath = Resolve-Path -Path $logsFolderPath -ErrorAction SilentlyContinue
+            }
 
             if ($resolvedPath -and -not [string]::IsNullOrEmpty($resolvedPath.Path) -and (Test-Path $resolvedPath.Path)) {                
                 $useNodeLogFile = Get-ChildItem -Path $resolvedPath | Where-Object {
