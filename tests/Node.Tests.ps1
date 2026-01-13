@@ -15,7 +15,7 @@ Describe "Node.js" {
             # Go up two directories to get runner root
             $runnerRoot = Split-Path (Split-Path $runnerProc.Path -Parent) -Parent
             #Write-Host "`$runnerRoot: $runnerRoot"
-            # Recursively find all _diag/pages folders under $homeDir(not homedir-replace with runnerroot)
+            # Recursively find all _diag/pages folders under the runner root directory
             $possiblePaths = Get-ChildItem -Path $runnerRoot -Directory -Recurse -ErrorAction SilentlyContinue |
                 Where-Object { $_.FullName -like "*_diag\pages" -or $_.FullName -like "*_diag/pages" }
             Write-Host "`LogsPaths:"
