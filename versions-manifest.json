@@ -1,5 +1,48 @@
 [
   {
+    "version": "26.1.0",
+    "stable": true,
+    "release_url": "https://github.com/actions/node-versions/releases/tag/26.1.0-25496618813",
+    "files": [
+      {
+        "filename": "node-26.1.0-darwin-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-darwin-arm64.tar.gz"
+      },
+      {
+        "filename": "node-26.1.0-darwin-x64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-darwin-x64.tar.gz"
+      },
+      {
+        "filename": "node-26.1.0-linux-arm64.tar.gz",
+        "arch": "arm64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-linux-arm64.tar.gz"
+      },
+      {
+        "filename": "node-26.1.0-linux-x64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-linux-x64.tar.gz"
+      },
+      {
+        "filename": "node-26.1.0-win32-arm64.7z",
+        "arch": "arm64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-win32-arm64.7z"
+      },
+      {
+        "filename": "node-26.1.0-win32-x64.7z",
+        "arch": "x64",
+        "platform": "win32",
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.1.0-25496618813/node-26.1.0-win32-x64.7z"
+      }
+    ]
+  },
+  {
     "version": "26.0.0",
     "stable": true,
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.0.0-25413736946",
