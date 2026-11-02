@@ -2,49 +2,51 @@
   {
     "version": "26.13.0",
     "stable": true,
-    "release_url": "https://github.com/actions/node-versions/releases/tag/26.13.0-40806794713",
+    "lts": "Lithium",
+    "release_url": "https://github.com/actions/node-versions/releases/tag/26.13.0-41378513395",
     "files": [
       {
         "filename": "node-26.13.0-darwin-arm64.tar.gz",
         "arch": "arm64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-darwin-arm64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-darwin-arm64.tar.gz"
       },
       {
         "filename": "node-26.13.0-darwin-x64.tar.gz",
         "arch": "x64",
         "platform": "darwin",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-darwin-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-darwin-x64.tar.gz"
       },
       {
         "filename": "node-26.13.0-linux-arm64.tar.gz",
         "arch": "arm64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-linux-arm64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-linux-arm64.tar.gz"
       },
       {
         "filename": "node-26.13.0-linux-x64.tar.gz",
         "arch": "x64",
         "platform": "linux",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-linux-x64.tar.gz"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-linux-x64.tar.gz"
       },
       {
         "filename": "node-26.13.0-win32-arm64.7z",
         "arch": "arm64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-win32-arm64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-win32-arm64.7z"
       },
       {
         "filename": "node-26.13.0-win32-x64.7z",
         "arch": "x64",
         "platform": "win32",
-        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-40806794713/node-26.13.0-win32-x64.7z"
+        "download_url": "https://github.com/actions/node-versions/releases/download/26.13.0-41378513395/node-26.13.0-win32-x64.7z"
       }
     ]
   },
   {
     "version": "26.12.1",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.12.1-39618969937",
     "files": [
       {
@@ -88,6 +90,7 @@
   {
     "version": "26.12.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.12.0-38668157440",
     "files": [
       {
@@ -131,6 +134,7 @@
   {
     "version": "26.11.1",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.11.1-37718106145",
     "files": [
       {
@@ -174,6 +178,7 @@
   {
     "version": "26.11.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.11.0-37718124002",
     "files": [
       {
@@ -217,6 +222,7 @@
   {
     "version": "26.10.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.10.0-35737674515",
     "files": [
       {
@@ -260,6 +266,7 @@
   {
     "version": "26.9.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.9.0-35174947414",
     "files": [
       {
@@ -303,6 +310,7 @@
   {
     "version": "26.8.2",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.8.2-34429851330",
     "files": [
       {
@@ -346,6 +354,7 @@
   {
     "version": "26.8.1",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.8.1-33034053154",
     "files": [
       {
@@ -389,6 +398,7 @@
   {
     "version": "26.8.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.8.0-33034064325",
     "files": [
       {
@@ -432,6 +442,7 @@
   {
     "version": "26.7.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.7.0-31064755789",
     "files": [
       {
@@ -475,6 +486,7 @@
   {
     "version": "26.6.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.6.0-30872438625",
     "files": [
       {
@@ -518,6 +530,7 @@
   {
     "version": "26.5.1",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.5.1-30508404249",
     "files": [
       {
@@ -561,6 +574,7 @@
   {
     "version": "26.5.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.5.0-28944078721",
     "files": [
       {
@@ -604,6 +618,7 @@
   {
     "version": "26.4.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.4.0-28176665805",
     "files": [
       {
@@ -647,6 +662,7 @@
   {
     "version": "26.3.1",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.3.1-27765697053",
     "files": [
       {
@@ -690,6 +706,7 @@
   {
     "version": "26.3.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.3.0-26776574275",
     "files": [
       {
@@ -733,6 +750,7 @@
   {
     "version": "26.2.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.2.0-26201774761",
     "files": [
       {
@@ -776,6 +794,7 @@
   {
     "version": "26.1.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.1.0-25496618813",
     "files": [
       {
@@ -819,6 +838,7 @@
   {
     "version": "26.0.0",
     "stable": true,
+    "lts": "Lithium",
     "release_url": "https://github.com/actions/node-versions/releases/tag/26.0.0-25413736946",
     "files": [
       {
